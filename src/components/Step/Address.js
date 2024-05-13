@@ -9,16 +9,30 @@ function formGroup({ formClass, label, children }){
     )
 }
 
-function step({ children }){
-    <form class="col col-12" data-phase="address">
-        <h3 class="form-title">寄送地址</h3>
+function Step({ dataPhase, formTitle, children }){
+    return(
+    <form class="col col-12" data-phase={dataPhase}>
+        <h3 class="form-title">{formTitle}</h3>
         <section class="form-body col col-12">
         { children }
         </section>
     </form>
+    )
 }
-export default function Address(){
-    
+function Step1(){
+    return
+}
+
+export default function Steps(){
+    return (
+        <>
+            <Step 
+                dataPhase="address"
+                formTitle="寄送地址"
+                
+            />
+        </>
+    )
 }
 
 <form class="col col-12" data-phase="address">
