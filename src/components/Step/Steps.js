@@ -1,8 +1,6 @@
-
-export default function Steps(){
-    return(
-        <section class="form-container col col-12">
-            
-        </section>
+import Step1 from './Address.js';
+export default function Steps() {
+    return (
+        <Step1 />
     )
 }
