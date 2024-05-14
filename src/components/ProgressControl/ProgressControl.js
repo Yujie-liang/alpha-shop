@@ -2,7 +2,7 @@ import styles from './ProgressControl.module.scss';
 
 function Button({ direction, text, iconUrl }) {
   return (
-    <button className={direction}>
+    <button className={`${styles.button} ${direction}`}>
       {text}
       <div data={iconUrl} className="cursor-point">
       </div>
