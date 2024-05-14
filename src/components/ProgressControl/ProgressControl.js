@@ -28,7 +28,7 @@ export default function ProgressControl() {
         <Button
           direction="next"
           text="下一步"
-          iconUrl="./public/icons/right-arrow.svg"
+          iconUrl="../../../public/icons/right-arrow.svg"
         />
       </ButtonGroup>
     </section>

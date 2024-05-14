@@ -1,0 +1,10 @@
+@use './styles/main.scss' as *;
+.registerTitle {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 38px;
+  color: var(--main-text);
+  text-align: center;
+  margin: 1rem;
+  border: 1px solid red;
+}
