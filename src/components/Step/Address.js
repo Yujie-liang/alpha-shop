@@ -1,3 +1,5 @@
+import styles from './Address.module.scss';
+
 const titleOptions = [
   { value: "mr", text: "先生" },
   { value: "ms", text: "女士" },
@@ -37,26 +39,26 @@ const cityOptions = [
 ]
 function width(lg, sm) {
   return (
-    "input-group input-w-lg-" + { lg } + "input-w-sm-" + { sm }
+    `input-w-lg-${lg} input-w-sm-${sm}`
   )
 }
 
 function FromInput({ lg, sm, label, type, placeholder }) {
   return (
-    <div className={width(lg, sm)}>
-      <div className="input-label">{label}</div>
-      <input type={type} placeholder={placeholder} />
+    <div className={`${styles.inputGroup} ${width(lg, sm)}`}>
+      <div className={styles.inputLabel}>{label}</div>
+      <input className={styles.input} type={type} placeholder={placeholder} />
     </div>
   )
 }
 function FormSelect({ lg, sm, label, required, options }) {
   return (
-    <div class={width(lg, sm)}>
-      <div className="input-label">{label}</div>
-      <div className="select-container">
-        <select required={required}>
+    <div className={`${styles.inputGroup} ${width(lg, sm)}`}>
+      <div className={styles.inputLabel}>{label}</div>
+      <div className={styles.selectContainer}>
+        <select className={`${styles.input} ${styles.select}`} required={required}>
           {options.map((option) => (
-            <option value={option.value}>{option.text}</option>
+            <option className={styles.option} value={option.value}>{option.text}</option>
           ))}
         </select>
       </div>
@@ -66,9 +68,9 @@ function FormSelect({ lg, sm, label, required, options }) {
 
 function StepFrame({ dataPhase, formTitle, children }) {
   return (
-    <form className="col col-12" data-phase={dataPhase}>
-      <h3 className="form-title">{formTitle}</h3>
-      <section className="form-body col col-12">
+    <form className={styles.formContainer} data-phase={dataPhase}>
+      <h3 className={styles.formTitle}>{formTitle}</h3>
+      <section className={`{styles.formBody} col col-12`}>
         {children}
       </section>
     </form>
@@ -80,7 +82,7 @@ export default function Step1() {
       dataPhase="address"
       formTitle="寄送地址"
     >
-      <div class="col col-12">
+      <div className={`${styles.formRow} col col-12`}>
         <FormSelect
           lg="2"
           sm="s1"
@@ -96,7 +98,7 @@ export default function Step1() {
           placeholder="請輸入姓名"
         />
       </div>
-      <div class="col col-12">
+      <div className={`${styles.formRow} col col-12`}>
         <FromInput
           lg="3"
           sm="full"
@@ -112,13 +114,20 @@ export default function Step1() {
           placeholder="請輸入電子郵件"
         />
       </div>
-      <div class="col col-12">
+      <div className={`${styles.formRow} col col-12`}>
         <FormSelect
           lg="2"
           sm="full"
           label="縣市"
           options={cityOptions}
           required={true}
+        />
+        <FromInput
+          lg="4"
+          sm="full"
+          label="地址"
+          type="text"
+          placeholder="請輸入地址"
         />
       </div>
     </StepFrame>

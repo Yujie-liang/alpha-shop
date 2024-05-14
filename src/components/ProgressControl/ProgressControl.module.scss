@@ -1,0 +1,15 @@
+.progressControlContainer {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+}
+
+.buttonGroup {
+  padding-top: 24px;
+  border-top: 1px solid #E6E6EB;
+
+  &[data-phase="address"] {
+    width: 100%;
+  }
+}

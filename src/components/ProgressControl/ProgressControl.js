@@ -1,3 +1,4 @@
+import styles from './ProgressControl.module.scss';
 
 function Button({ direction, text, iconUrl }) {
   return (
@@ -11,7 +12,7 @@ function Button({ direction, text, iconUrl }) {
 //上方div原本tag是object，object應該會指向下一頁，所以就變成了無限迴圈
 function ButtonGroup({ dataPhase, children }) {
   return (
-    <section className="button-group col col-12" data-phase={dataPhase}>
+    <section className={`${styles.buttonGroup} col col-12`} data-phase={dataPhase}>
       {children}
     </section>
   )
@@ -21,7 +22,7 @@ function ButtonGroup({ dataPhase, children }) {
 
 export default function ProgressControl() {
   return (
-    <section className="progress-control-container col col-lg-6 col-sm-12">
+    <section className={`${styles.progressControlContainer} col col-lg-6 col-sm-12`}>
       <ButtonGroup
         dataPhase="address"
       >

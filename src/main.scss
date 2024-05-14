@@ -1,19 +1,88 @@
 @import url("https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Inter&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Nunito+Sans&display=swap");
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
   margin: 0;
   padding: 0;
   border: 0;
@@ -23,8 +92,17 @@ time, mark, audio, video {
 }
 
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
   display: block;
 }
 
@@ -32,16 +110,20 @@ body {
   line-height: 1;
 }
 
-ol, ul {
+ol,
+ul {
   list-style: none;
 }
 
-blockquote, q {
+blockquote,
+q {
   quotes: none;
 }
 
-blockquote:before, blockquote:after,
-q:before, q:after {
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
   content: "";
   content: none;
 }
@@ -51,7 +133,9 @@ table {
   border-spacing: 0;
 }
 
-*, ::before, ::after {
+*,
+::before,
+::after {
   box-sizing: border-box;
 }
 
@@ -65,7 +149,8 @@ table {
   --site-edge-margin: 15px;
   --main-font-family: "Noto Sans TC", sans-serif;
 }
-  body {
+
+body {
   --background-color: #FFFFFF;
   --footer-background-color: #F6F7F8;
   --nav-icon: #2A2A2A;
@@ -98,7 +183,9 @@ table {
 
 
 
-ul, ol, li {
+ul,
+ol,
+li {
   list-style: none;
   margin: 0px;
   padding: 0px;
@@ -120,11 +207,8 @@ ul, ol, li {
 .cursor-point {
   cursor: pointer;
 }
-.col {
-    display:flex;
-    flex-wrap: wrap;
-    align-content: flex-start;
-}
+
+
 .col.col-1 {
   display: flex;
   flex-wrap: wrap;
@@ -132,6 +216,7 @@ ul, ol, li {
   align-content: flex-start;
   max-width: 8.3333333333%;
 }
+
 .col.col-2 {
   display: flex;
   flex-wrap: wrap;
@@ -139,6 +224,7 @@ ul, ol, li {
   align-content: flex-start;
   max-width: 16.6666666667%;
 }
+
 .col.col-3 {
   display: flex;
   flex-wrap: wrap;
@@ -146,6 +232,7 @@ ul, ol, li {
   align-content: flex-start;
   max-width: 25%;
 }
+
 .col.col-4 {
   display: flex;
   flex-wrap: wrap;
@@ -153,6 +240,7 @@ ul, ol, li {
   align-content: flex-start;
   max-width: 33.3333333333%;
 }
+
 .col.col-5 {
   display: flex;
   flex-wrap: wrap;
@@ -160,6 +248,7 @@ ul, ol, li {
   align-content: flex-start;
   max-width: 41.6666666667%;
 }
+
 .col.col-6 {
   display: flex;
   flex-wrap: wrap;
@@ -167,6 +256,7 @@ ul, ol, li {
   align-content: flex-start;
   max-width: 50%;
 }
+
 .col.col-7 {
   display: flex;
   flex-wrap: wrap;
@@ -174,6 +264,7 @@ ul, ol, li {
   align-content: flex-start;
   max-width: 58.3333333333%;
 }
+
 .col.col-8 {
   display: flex;
   flex-wrap: wrap;
@@ -181,6 +272,7 @@ ul, ol, li {
   align-content: flex-start;
   max-width: 66.6666666667%;
 }
+
 .col.col-9 {
   display: flex;
   flex-wrap: wrap;
@@ -188,6 +280,7 @@ ul, ol, li {
   align-content: flex-start;
   max-width: 75%;
 }
+
 .col.col-10 {
   display: flex;
   flex-wrap: wrap;
@@ -195,6 +288,7 @@ ul, ol, li {
   align-content: flex-start;
   max-width: 83.3333333333%;
 }
+
 .col.col-11 {
   display: flex;
   flex-wrap: wrap;
@@ -202,6 +296,7 @@ ul, ol, li {
   align-content: flex-start;
   max-width: 91.6666666667%;
 }
+
 .col.col-12 {
   display: flex;
   flex-wrap: wrap;
@@ -218,6 +313,7 @@ ul, ol, li {
     align-content: flex-start;
     max-width: 8.3333333333%;
   }
+
   .col.col-lg-2 {
     display: flex;
     flex-wrap: wrap;
@@ -225,6 +321,7 @@ ul, ol, li {
     align-content: flex-start;
     max-width: 16.6666666667%;
   }
+
   .col.col-lg-3 {
     display: flex;
     flex-wrap: wrap;
@@ -232,6 +329,7 @@ ul, ol, li {
     align-content: flex-start;
     max-width: 25%;
   }
+
   .col.col-lg-4 {
     display: flex;
     flex-wrap: wrap;
@@ -239,6 +337,7 @@ ul, ol, li {
     align-content: flex-start;
     max-width: 33.3333333333%;
   }
+
   .col.col-lg-5 {
     display: flex;
     flex-wrap: wrap;
@@ -246,6 +345,7 @@ ul, ol, li {
     align-content: flex-start;
     max-width: 41.6666666667%;
   }
+
   .col.col-lg-6 {
     display: flex;
     flex-wrap: wrap;
@@ -253,6 +353,7 @@ ul, ol, li {
     align-content: flex-start;
     max-width: 50%;
   }
+
   .col.col-lg-7 {
     display: flex;
     flex-wrap: wrap;
@@ -260,6 +361,7 @@ ul, ol, li {
     align-content: flex-start;
     max-width: 58.3333333333%;
   }
+
   .col.col-lg-8 {
     display: flex;
     flex-wrap: wrap;
@@ -267,6 +369,7 @@ ul, ol, li {
     align-content: flex-start;
     max-width: 66.6666666667%;
   }
+
   .col.col-lg-9 {
     display: flex;
     flex-wrap: wrap;
@@ -274,6 +377,7 @@ ul, ol, li {
     align-content: flex-start;
     max-width: 75%;
   }
+
   .col.col-lg-10 {
     display: flex;
     flex-wrap: wrap;
@@ -281,6 +385,7 @@ ul, ol, li {
     align-content: flex-start;
     max-width: 83.3333333333%;
   }
+
   .col.col-lg-11 {
     display: flex;
     flex-wrap: wrap;
@@ -288,6 +393,7 @@ ul, ol, li {
     align-content: flex-start;
     max-width: 91.6666666667%;
   }
+
   .col.col-lg-12 {
     display: flex;
     flex-wrap: wrap;
@@ -295,7 +401,32 @@ ul, ol, li {
     align-content: flex-start;
     max-width: 100%;
   }
+
+  .input-w-lg-1 {
+    width: 12.037037037%;
+  }
+
+  .input-w-lg-2 {
+    width: 29.6296296296%;
+  }
+
+  .input-w-lg-3 {
+    width: 47.2222222222%;
+  }
+
+  .input-w-lg-4 {
+    width: 64.8148148148%;
+  }
+
+  .input-w-lg-5 {
+    width: 82.4074074074%;
+  }
+
+  .input-w-lg-6 {
+    width: 100%;
+  }
 }
+
 @media screen and (max-width: 749.5px) {
   .col.col-sm-1 {
     display: flex;
@@ -304,6 +435,7 @@ ul, ol, li {
     align-content: flex-start;
     max-width: 8.3333333333%;
   }
+
   .col.col-sm-2 {
     display: flex;
     flex-wrap: wrap;
@@ -311,6 +443,7 @@ ul, ol, li {
     align-content: flex-start;
     max-width: 16.6666666667%;
   }
+
   .col.col-sm-3 {
     display: flex;
     flex-wrap: wrap;
@@ -318,6 +451,7 @@ ul, ol, li {
     align-content: flex-start;
     max-width: 25%;
   }
+
   .col.col-sm-4 {
     display: flex;
     flex-wrap: wrap;
@@ -325,6 +459,7 @@ ul, ol, li {
     align-content: flex-start;
     max-width: 33.3333333333%;
   }
+
   .col.col-sm-5 {
     display: flex;
     flex-wrap: wrap;
@@ -332,6 +467,7 @@ ul, ol, li {
     align-content: flex-start;
     max-width: 41.6666666667%;
   }
+
   .col.col-sm-6 {
     display: flex;
     flex-wrap: wrap;
@@ -339,6 +475,7 @@ ul, ol, li {
     align-content: flex-start;
     max-width: 50%;
   }
+
   .col.col-sm-7 {
     display: flex;
     flex-wrap: wrap;
@@ -346,6 +483,7 @@ ul, ol, li {
     align-content: flex-start;
     max-width: 58.3333333333%;
   }
+
   .col.col-sm-8 {
     display: flex;
     flex-wrap: wrap;
@@ -353,6 +491,7 @@ ul, ol, li {
     align-content: flex-start;
     max-width: 66.6666666667%;
   }
+
   .col.col-sm-9 {
     display: flex;
     flex-wrap: wrap;
@@ -360,6 +499,7 @@ ul, ol, li {
     align-content: flex-start;
     max-width: 75%;
   }
+
   .col.col-sm-10 {
     display: flex;
     flex-wrap: wrap;
@@ -367,6 +507,7 @@ ul, ol, li {
     align-content: flex-start;
     max-width: 83.3333333333%;
   }
+
   .col.col-sm-11 {
     display: flex;
     flex-wrap: wrap;
@@ -374,6 +515,7 @@ ul, ol, li {
     align-content: flex-start;
     max-width: 91.6666666667%;
   }
+
   .col.col-sm-12 {
     display: flex;
     flex-wrap: wrap;
@@ -381,7 +523,28 @@ ul, ol, li {
     align-content: flex-start;
     max-width: 100%;
   }
+
+  .input-w-sm-s1 {
+    width: 45.6647398844%;
+  }
+
+  .input-w-sm-s2 {
+    width: 45.6647398844%;
+  }
+
+  .input-w-sm-s3 {
+    width: 45.6647398844%;
+  }
+
+  .input-w-sm-full {
+    width: 100%;
+  }
+
+  main.site-main {
+    margin-top: 16px;
+  }
 }
+
 :root {
   --header-height: 60px;
   --header-logo-width: 170px;
