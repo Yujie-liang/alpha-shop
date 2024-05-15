@@ -1,11 +1,12 @@
 import styles from './ProgressControl.module.scss';
 
 function Button({ direction, text, iconUrl }) {
+  const btnStyle = direction === "next" ? styles.btnNext : styles.btnPrev;
   return (
-    <button className={`${styles.button} ${direction}`}>
+    <button className={`${styles.button} ${btnStyle}`}>
       {text}
-      <div data={iconUrl} className="cursor-point">
-      </div>
+      <img src={iconUrl} alt="arrow" className={styles.arrow}>
+      </img>
     </button>
   )
 }
@@ -22,14 +23,43 @@ function ButtonGroup({ dataPhase, children }) {
 
 export default function ProgressControl() {
   return (
-    <section className={`${styles.progressControlContainer} col col-lg-6 col-sm-12`}>
+    <section className={`${styles.progressControlContainer} col col-lg-12 col-sm-12`}>
       <ButtonGroup
         dataPhase="address"
       >
         <Button
           direction="next"
           text="下一步"
-          iconUrl="../../../public/icons/right-arrow.svg"
+          iconUrl="/icons/right-arrow.svg"
+        />
+      </ButtonGroup>
+      
+      <ButtonGroup
+        dataPhase="shipping"
+      >
+        <Button
+          direction="prev"
+          text="上一步"
+          iconUrl="/icons/left-arrow.svg"
+        />
+        <Button
+          direction="next"
+          text="下一步"
+          iconUrl="/icons/right-arrow.svg"
+        />
+      </ButtonGroup>
+      <ButtonGroup
+        dataPhase="credit-card"
+      >
+        <Button
+          direction="prev"
+          text="上一步"
+          iconUrl="/icons/left-arrow.svg"
+        />
+        <Button
+          direction="next"
+          text="確認下單"
+          iconUrl="/icons/right-arrow.svg"
         />
       </ButtonGroup>
     </section>

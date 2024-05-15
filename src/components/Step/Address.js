@@ -1,4 +1,5 @@
 import styles from './Address.module.scss';
+import {FormInput, FormSelect, StepFrame} from './StepComponents';
 
 const titleOptions = [
   { value: "mr", text: "先生" },
@@ -37,45 +38,7 @@ const cityOptions = [
   { value: "KMN", text: "金門縣" },
   { value: "LNN", text: "連江縣" },
 ]
-function width(lg, sm) {
-  return (
-    `input-w-lg-${lg} input-w-sm-${sm}`
-  )
-}
 
-function FromInput({ lg, sm, label, type, placeholder }) {
-  return (
-    <div className={`${styles.inputGroup} ${width(lg, sm)}`}>
-      <div className={styles.inputLabel}>{label}</div>
-      <input className={styles.input} type={type} placeholder={placeholder} />
-    </div>
-  )
-}
-function FormSelect({ lg, sm, label, required, options }) {
-  return (
-    <div className={`${styles.inputGroup} ${width(lg, sm)}`}>
-      <div className={styles.inputLabel}>{label}</div>
-      <div className={styles.selectContainer}>
-        <select className={`${styles.input} ${styles.select}`} required={required}>
-          {options.map((option) => (
-            <option className={styles.option} value={option.value}>{option.text}</option>
-          ))}
-        </select>
-      </div>
-    </div>
-  )
-}
-
-function StepFrame({ dataPhase, formTitle, children }) {
-  return (
-    <form className={styles.formContainer} data-phase={dataPhase}>
-      <h3 className={styles.formTitle}>{formTitle}</h3>
-      <section className={`{styles.formBody} col col-12`}>
-        {children}
-      </section>
-    </form>
-  )
-}
 export default function Step1() {
   return (
     <StepFrame
@@ -90,7 +53,7 @@ export default function Step1() {
           options={titleOptions}
           required={false}
         />
-        <FromInput
+        <FormInput
           lg="4"
           sm="s2"
           label="姓名"
@@ -99,14 +62,14 @@ export default function Step1() {
         />
       </div>
       <div className={`${styles.formRow} col col-12`}>
-        <FromInput
+        <FormInput
           lg="3"
           sm="full"
           label="電話"
           type="tel"
           placeholder="請輸入行動電話"
         />
-        <FromInput
+        <FormInput
           lg="3"
           sm="full"
           label="Email"
@@ -122,7 +85,7 @@ export default function Step1() {
           options={cityOptions}
           required={true}
         />
-        <FromInput
+        <FormInput
           lg="4"
           sm="full"
           label="地址"
