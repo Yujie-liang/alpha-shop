@@ -1,9 +1,9 @@
 import styles from './StepProgress.module.scss';
 
 function ProgressGroup({ dataPhase, step, progressLabel }) {
-    const iconStyle = step === '3' ? styles.progressIconUndone : styles.progressIconDone;
-    const textStyle = step === '3' ? styles.textUndone : styles.textDone;
-    const progressLabelStyle = step === '3' ? styles.progressLabelUndone : styles.progressLabel;
+    const iconStyle = step === '3' ? styles.progressIcon : styles.progressIconDone;
+    const textStyle = step === '3' ? styles.text : styles.textDone;
+    const progressLabelStyle = step === '3' ? styles.progressLabel : styles.progressLabel;
     return (
         <span className={styles.progressGroup} data-phase={dataPhase}>
             <span className={iconStyle}>

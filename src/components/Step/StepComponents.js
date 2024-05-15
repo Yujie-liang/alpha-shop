@@ -1,4 +1,4 @@
-import styles from './Address.module.scss';
+import styles from './StepComponents.module.scss';
 
 
 function width(lg, sm) {
@@ -29,12 +29,35 @@ export function FormSelect({ lg, sm, label, required, options }) {
     </div>
   )
 }
+export function FormRadio({shippingType, text, period, price}){
+    
+    return(
+        <label className={`${styles.radioGroup} col col-12`} data-price="0">
+            <input id={shippingType} type="radio" name="shipping"/>
+            <div className={styles.radioInfo}>
+                <div className={`${styles.col} col col-12`}>
+                    <div className={styles.text}>{text}</div>
+                    <div className={styles.price}>{price}</div>
+                </div>
+                <div className={`${styles.period} col col-12`}>{period}</div>
+            </div>
+            <div className={styles.radioBoxBorder}></div>
+        </label>
+    )
+}
 
+export function FormRow({children}){
+    return(
+        <div className={`${styles.formRow} col col-12`}>
+            {children}
+        </div>
+    )
+}
 export function StepFrame({ dataPhase, formTitle, children }) {
   return (
     <form className={styles.formContainer} data-phase={dataPhase}>
       <h3 className={styles.formTitle}>{formTitle}</h3>
-      <section className={`{styles.formBody} col col-12`}>
+      <section className={`col col-12`}>
         {children}
       </section>
     </form>
