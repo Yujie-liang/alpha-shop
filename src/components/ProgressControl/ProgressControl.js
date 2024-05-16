@@ -23,7 +23,7 @@ function ButtonGroup({ dataPhase, children }) {
 
 export default function ProgressControl() {
   return (
-    <section className={`${styles.progressControlContainer} col col-lg-12 col-sm-12`}>
+    <section className={`${styles.progressControlContainer} col col-lg-6 col-sm-12`}>
       <ButtonGroup
         dataPhase="address"
       >
@@ -65,39 +65,3 @@ export default function ProgressControl() {
     </section>
   )
 }
-
-// < !--progress - control-- >
-// < !--step1 -->
-//   <section class="progress-control-container col col-lg-6 col-sm-12">
-//     <section class="button-group col col-12" data-phase="address">
-//       <button class="next">
-//         下一步
-//         <object data="./public/icons/right-arrow.svg" class="cursor-point">
-//         </object>
-//       </button>
-//     </section>
-//     <!-- step2 -->
-//     <section class="button-group col col-12" data-phase="shipping">
-//       <button class="prev">
-//         <object data="./public/icons/left-arrow.svg" class="cursor-point">
-//         </object>
-//         上一步
-//       </button>
-//       <button class="next">
-//         下一步
-//         <object data="./public/icons/right-arrow.svg" class="cursor-point">
-//         </object>
-//       </button>
-//     </section>
-//     <!-- step3 -->
-//     <section class="button-group col col-12" data-phase="credit-card">
-//       <button class="prev">
-//         <object data="./public/icons/left-arrow.svg" class="cursor-point">
-//         </object>
-//         上一步
-//       </button>
-//       <button class="next">
-//         確認下單
-//       </button>
-//     </section>
-//   </section>

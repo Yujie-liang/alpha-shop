@@ -5,15 +5,23 @@ import styles from './app.module.scss';
 import StepProgress from './components/StepProgress/StepProgress.js';
 import Steps from './components/Step/Steps.js';
 import ProgressControl from './components/ProgressControl/ProgressControl.js';
+import Cart from './components/Cart/Cart.js'
 function App() {
   return (
     <div className="App">
       <main className={styles.main}>
-        <h2 className={`${styles.registerTitle} col`}>結帳</h2>
-        <StepProgress />
-        <Steps />
-        <ProgressControl />
+        <section className='register-container col col-6 col-sm-12'>
+          <h2 className={`${styles.registerTitle} col`}>結帳</h2>
+          <StepProgress />
+          <Steps />
+          <ProgressControl />
+          
+        </section>
+        <section className='cart-container col col-lg-5 col-sm-12'>
+          <Cart />
+        </section>
       </main>
+
     </div>
   );
 }
