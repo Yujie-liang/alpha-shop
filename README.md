@@ -12,7 +12,7 @@ A checkout part of an online shop, designed to provide good user experience of c
 </div>  
 
 ## :camera:Screenshots
-![checkout](https://i.imgur.com/NZqeQuO.png)
+![checkout](https://i.imgur.com/NneNQyl.png)
 
 ## :star2: Features
 
