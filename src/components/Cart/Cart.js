@@ -1,26 +1,30 @@
-import ProductList from "./ProductList"
+import ProductList from './ProductList'
+import styles from './Cart.module.scss'
 
-function CartInfo({type, text}){
+function CartInfo({type, text, price}){
+  const priceStyle = type === 'shipping' ? styles.shippingPrice : styles.infoPrice;
   return( 
-    <section class={type}>
-      <div class="text">{text}</div>
-      <div class="price"></div>
+    <section className={`${styles.cartInfo} ${type} col col-12`}>
+      <div className={styles.infoText}>{text}</div>
+      <div className={priceStyle}>{price}</div>
     </section>
   )
 }
 export default function Cart(){
     
     return(
-    <section class="cart-container col col-lg-5 col-sm-12">
-      <h3 class="cart-title">購物籃</h3>
+    <section className={`${styles.cartContainer} col col-lg-5 col-sm-12`}>
+      <h3 className={styles.cartTitle}>購物籃</h3>
       <ProductList />
       <CartInfo 
        type="shipping"
-       text="運費" 
+       text="運費"
+       price="免費"
       />
       <CartInfo 
        type="total"
        text="小計" 
+       price="$300"
       />
     </section>
     

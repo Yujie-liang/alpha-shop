@@ -1,3 +1,5 @@
+import styles from './Cart.module.scss';
+
 const items = [
     {
       id: '1',
@@ -18,18 +20,18 @@ const items = [
 function Items({items}){
     return(
       items.map(item => 
-        <div class="product-container col col-12" data-count="0" data-price={item.price}>
-            <img class="img-container"src={item.img} alt="product"/>
-            <div class="product-info">
-            <div class="product-name">{item.name}</div>
-            <div class="product-control-container">
-                <div class="product-control">
-                <img src="/icons/minus.svg" className="product action minus" alt="minus"></img>
-                <span class="product-count"></span>
-                <img src="/icons/plus.svg" className="product action plus" alt="plus"></img>
-                </div>
-            </div>
-            <div class="price">${item.price}</div>
+        <div className={`${styles.productContainer} col col-12`} data-count="0" data-price={item.price}>
+            <img className={styles.imgContainer} src={item.img} alt="product"/>
+            <div className={styles.productInfo}>
+              <div className={styles.productName}>{item.name}</div>
+              <div className={styles.productControlContainer}>
+                  <div className={styles.productControl}>
+                    <img src="/icons/minus.svg" className="product action minus" alt="minus"></img>
+                    <span className={styles.productCount}>1</span>
+                    <img src="/icons/plus.svg" className="product action plus" alt="plus"></img>
+                  </div>
+              </div>
+              <div className={styles.price}>${item.price}</div>
             </div>
         </div>
       )
@@ -37,7 +39,7 @@ function Items({items}){
 }
 export default function ProductList(){
     return(
-        <section class="product-list col col-12" data-total-price="0">
+        <section className="product-list col col-12" data-total-price="0">
             <Items 
                 items={items}
             />

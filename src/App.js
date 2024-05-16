@@ -17,9 +17,7 @@ function App() {
           <ProgressControl />
           
         </section>
-        <section className='cart-container col col-lg-5 col-sm-12'>
-          <Cart />
-        </section>
+        <Cart />
       </main>
 
     </div>
