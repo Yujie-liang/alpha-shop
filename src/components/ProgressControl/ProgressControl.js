@@ -1,9 +1,9 @@
 import styles from './ProgressControl.module.scss';
 
-function Button({ direction, text, iconUrl }) {
+function Button({ direction, text, iconUrl, onClick }) {
   const btnStyle = direction === "next" ? styles.btnNext : styles.btnPrev;
   return (
-    <button className={`${styles.button} ${btnStyle}`}>
+    <button className={`${styles.button} ${btnStyle}`} onClick={onClick}>
       {text}
       <img src={iconUrl} alt="arrow" className={styles.arrow}>
       </img>
@@ -21,47 +21,56 @@ function ButtonGroup({ dataPhase, children }) {
 
 
 
-export default function ProgressControl() {
+export default function ProgressControl({step, handleStep}) {
   return (
     <section className={`${styles.progressControlContainer} col col-lg-6 col-sm-12`}>
-      <ButtonGroup
-        dataPhase="address"
-      >
-        <Button
-          direction="next"
-          text="下一步"
-          iconUrl="/icons/right-arrow.svg"
-        />
-      </ButtonGroup>
-      
-      <ButtonGroup
-        dataPhase="shipping"
-      >
-        <Button
-          direction="prev"
-          text="上一步"
-          iconUrl="/icons/left-arrow.svg"
-        />
-        <Button
-          direction="next"
-          text="下一步"
-          iconUrl="/icons/right-arrow.svg"
-        />
-      </ButtonGroup>
-      <ButtonGroup
-        dataPhase="credit-card"
-      >
-        <Button
-          direction="prev"
-          text="上一步"
-          iconUrl="/icons/left-arrow.svg"
-        />
-        <Button
-          direction="next"
-          text="確認下單"
-          iconUrl="/icons/right-arrow.svg"
-        />
-      </ButtonGroup>
+      {step === 1 && 
+        <ButtonGroup
+          dataPhase="address"
+        >
+          <Button
+            direction="next"
+            text="下一步"
+            iconUrl="/icons/right-arrow.svg"
+            onClick={(e)=>handleStep(e, 'next')}
+          />
+        </ButtonGroup>
+      }
+      {step === 2 && 
+        <ButtonGroup
+          dataPhase="shipping"
+        >
+          <Button
+            direction="prev"
+            text="上一步"
+            iconUrl="/icons/left-arrow.svg"
+            onClick={(e)=>handleStep(e, 'prev')}
+          />
+          <Button
+            direction="next"
+            text="下一步"
+            iconUrl="/icons/right-arrow.svg"
+            onClick={(e)=>handleStep(e, 'next')}
+          />
+        </ButtonGroup>
+      }
+      {step === 3 &&
+        <ButtonGroup
+          dataPhase="credit-card"
+        >
+          <Button
+            direction="prev"
+            text="上一步"
+            iconUrl="/icons/left-arrow.svg"
+            onClick={(e)=>handleStep(e, 'prev')}
+          />
+          <Button
+            direction="next"
+            text="確認下單"
+            iconUrl="/icons/right-arrow.svg"
+          />
+        </ButtonGroup>
+      }
     </section>
   )
 }

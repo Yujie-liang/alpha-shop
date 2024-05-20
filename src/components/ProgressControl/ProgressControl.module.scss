@@ -50,15 +50,3 @@
   }
 }
 
-// for static
-// .buttonGroup[data-phase="address"] .button,  .buttonGroup[data-phase="address"]{
-//   display: none;
-// }
-
-.buttonGroup[data-phase="shipping"] .button,  .buttonGroup[data-phase="shipping"]{
-  display: none;
-}
-
-.buttonGroup[data-phase="credit-card"] .button,  .buttonGroup[data-phase="credit-card"]{
-  display: none;
-}

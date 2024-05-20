@@ -126,7 +126,7 @@
 
     }
 
-    .progressBar {
+    .progressBar, .progressBarHidden {
         display: flex;
         flex-grow: 1;
         max-width: 60px;
@@ -134,6 +134,8 @@
         border-width: 2px;
         border-style: solid;
         color: var(--done-progress-border);
-
+    }
+    .progressBarHidden {
+        visibility: hidden;
     }
 }
