@@ -9,18 +9,21 @@ font-size: 24px;
 .formRow {
     justify-content: space-between;
 }
+
 .radioGroup {
   position: relative;
   justify-content: unset;
   padding: 11px 20px;
   margin-top: 24px;
   cursor: pointer;
+
     input[type="radio"]{
         width: 20px;
         height: 20px;
         margin-right: 20px;
         align-self: center;
         -webkit-appearance: none;
+
         &::before{
             content: "";
             display: block;
@@ -30,10 +33,12 @@ font-size: 24px;
             border-radius: 50%;
             background-color: #FFFFFF;
         }
+
         &:checked::before {
             border: 6px solid #2A2A2A;
             background-color: #FFFFFF;
         }
+
         & ~ .radioBoxBorder {
             border-radius: 4px;
             border: 1px solid #F0F0F5;
@@ -43,6 +48,7 @@ font-size: 24px;
             top: 0;
             bottom: 0;
         }
+
         &:checked ~ .radioBoxBorder{
             border: 1px solid #2A2A2A;
         }
@@ -54,19 +60,23 @@ font-size: 24px;
         flex-grow: 1;
         flex-wrap: wrap;
         align-items: center;
+
         .col {
             display: flex;
             justify-content: space-between;
             margin-bottom: 2px;
         }
+
         .text {
             font-size: 14px;
             line-height: 20px;
         }
+
         .price {
             font-size: 12px;
             line-height: 16px;
         }
+
         .period {
             font-size: 12px;
             line-height: 16px;
@@ -82,7 +92,6 @@ font-size: 24px;
     line-height: 16px;
     color: var(--input-label);
     margin-bottom: 8px;
-
   }
   
   .inputGroup {

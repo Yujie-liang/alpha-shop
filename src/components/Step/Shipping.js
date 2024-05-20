@@ -14,10 +14,10 @@ export default function Shipping() {
             >
             </FormRadio>
             <FormRadio
-            shippingType="shipping-dhl"
-            text="DHL貨運"
-            period="48 小時內送達"
-            price="$500"
+                shippingType="shipping-dhl"
+                text="DHL貨運"
+                period="48 小時內送達"
+                price="$500"
             >
             </FormRadio>
         </StepFrame>

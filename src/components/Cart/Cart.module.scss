@@ -2,17 +2,21 @@
     margin-top: 100px;
     padding: 32px 24px;
     border: 1px solid var(--product-action-bg);
+
     .cartTitle{
         font-size: 18px;
         font-weight: 700;
     }
+
     .productContainer {
         display: flex;
         margin-top: 32px;
+
         .imgContainer {
             width: 100px;
             height: 100px;
         }
+
         .productInfo {
             flex: 1;
             margin-left: 16px;
@@ -24,25 +28,35 @@
             grid-template-areas: 
                 "name price"
                 "productControl price";
+
             .productName {
                 font-size: 16px;
                 line-height: 24px;
                 grid-area: name;
             }
+
             .price {
                 font-size: 16px;
                 line-height: 22px;
                 grid-area: price;
                 justify-self: end;
             }
+
             .productControlContainer {
                 grid-area: productControl;
+
                 .productControl{
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
+                    max-width: 140px;
+
                     .productCount {
                         font-size: 14px;
+                    }
+
+                    .action:hover {
+                        cursor: pointer;
                     }
                 }
             }
@@ -52,17 +66,20 @@
         margin-top: 32px;
         padding-top: 16px;
         border-top: 1px solid var(--product-action-bg);
+
         .infoPrice{
             font-size: 14px;
             line-height: 17px;
             margin-left: auto;
         }
+
         .shippingPrice{
             font-size: 14px;
             line-height: 17px;
             margin-left: auto;
             font-weight: 700;
         }
+        
         .infoText {
             font-size: 14px;
             line-height: 20px;

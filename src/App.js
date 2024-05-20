@@ -5,6 +5,7 @@ import StepProgress from './components/StepProgress/StepProgress.js';
 import Steps from './components/Step/Steps.js';
 import ProgressControl from './components/ProgressControl/ProgressControl.js';
 import Cart from './components/Cart/Cart.js'
+
 function App() {
   const [step, setStep] = useState(1);
   function handleStep(e, direction) {

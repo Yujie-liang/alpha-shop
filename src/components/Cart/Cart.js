@@ -23,10 +23,11 @@ function CartInfo({type, text, price}){
   return( 
     <section className={`${styles.cartInfo} ${type} col col-12`}>
       <div className={styles.infoText}>{text}</div>
-      <div className={priceStyle}>${price}</div>
+      <div className={priceStyle}>{price}</div>
     </section>
   )
 }
+
 export default function Cart(){
   const [quantities, setQuantities] = useState({'1':1, '2':1});
 
@@ -57,7 +58,7 @@ export default function Cart(){
     <CartInfo 
       type="total"
       text="小計" 
-      price={total}
+      price={`$${total}`}
     />
   </section>
   
