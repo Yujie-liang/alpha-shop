@@ -1,5 +1,7 @@
 import styles from './ProgressControl.module.scss';
-
+import{ useContext } from 'react';
+import { FormContext } from '../../FormContext';
+import { CartContext } from '../../CartContext';
 function Button({ direction, text, iconUrl, onClick }) {
   const btnStyle = direction === "next" ? styles.btnNext : styles.btnPrev;
   return (
@@ -10,7 +12,7 @@ function Button({ direction, text, iconUrl, onClick }) {
     </button>
   )
 }
-//上方div原本tag是object，object應該會指向下一頁，所以就變成了無限迴圈
+
 function ButtonGroup({ dataPhase, children }) {
   return (
     <section className={`${styles.buttonGroup} col col-12`} data-phase={dataPhase}>
@@ -20,8 +22,10 @@ function ButtonGroup({ dataPhase, children }) {
 }
 
 
-
 export default function ProgressControl({step, handleStep}) {
+  const {formState} = useContext(FormContext);
+  const {total} = useContext(CartContext);
+
   return (
     <section className={`${styles.progressControlContainer} col col-lg-6 col-sm-12`}>
       {step === 1 && 
@@ -68,6 +72,7 @@ export default function ProgressControl({step, handleStep}) {
             direction="next"
             text="確認下單"
             iconUrl="/icons/right-arrow.svg"
+            onClick={()=>console.log(`Form State: ${JSON.stringify(formState)} Total: ${total}`)}
           />
         </ButtonGroup>
       }

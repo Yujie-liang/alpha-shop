@@ -7,11 +7,12 @@ function width(lg, sm) {
   )
 }
 
-export function FormInput({ lg, sm, label, type, placeholder }) {
+export function FormInput({ lg, sm, label, type, name, value, placeholder, handleChange }) {
+  
   return (
     <div className={`${styles.inputGroup} ${width(lg, sm)}`}>
       <div className={styles.inputLabel}>{label}</div>
-      <input className={styles.input} type={type} placeholder={placeholder} />
+      <input className={styles.input} type={type} name={name} placeholder={placeholder} value={value} onChange={handleChange}/>
     </div>
   )
 }

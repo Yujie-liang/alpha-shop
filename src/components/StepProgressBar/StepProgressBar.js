@@ -1,4 +1,4 @@
-import styles from './StepProgress.module.scss';
+import styles from './StepProgressBar.module.scss';
 
 function ProgressGroup({ dataPhase, step, progressLabel, currentStep }) {
     // conditional styling
