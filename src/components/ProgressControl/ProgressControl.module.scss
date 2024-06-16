@@ -9,8 +9,55 @@
 .buttonGroup {
   padding-top: 24px;
   border-top: 1px solid #E6E6EB;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 
-  &[data-phase="address"] .button {
-    width: 100%;
+  .button {
+    display: flex;
+    align-items: center;
+    height: 46px;
+    font-family: Inter, sans-serif;
+    font-size: 14px;
+    border-radius: 8px;
+    border-width: 0px;
+    padding: 0px;
+
+    &:hover{
+      cursor: pointer;
+    }
+
+    .arrow{
+      width: 24px;
+      height: 24px;
+      margin-left: 12px;
+    }
+
+    &.btnNext {
+      justify-content: center;
+      width: 174px;
+      font-weight: 500;
+      line-height: 17px;
+      background: var(--pink);
+      color: #FFFFFF;
+    }
+
+    &.btnPrev {
+      background-color: transparent;
+      line-height: 20px;
+      font-weight: 400;
+      color: #000000;
+      flex-direction: row-reverse;
+
+      .arrow {
+        margin-right: 12px;
+        margin-left: 0px;
+      }
+    }
+  }
+  
+  &[data-phase="address"] .button{
+    margin-left: auto;
   }
 }
+

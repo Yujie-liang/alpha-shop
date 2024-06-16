@@ -27,7 +27,6 @@
     align-items: center;
     justify-content: space-between;
     margin: 48px auto 0 auto;
-
     .progressGroup {
         display: block;
 
@@ -127,7 +126,7 @@
 
     }
 
-    .progressBar {
+    .progressBar, .progressBarHidden {
         display: flex;
         flex-grow: 1;
         max-width: 60px;
@@ -135,6 +134,8 @@
         border-width: 2px;
         border-style: solid;
         color: var(--done-progress-border);
-
+    }
+    .progressBarHidden {
+        visibility: hidden;
     }
 }
