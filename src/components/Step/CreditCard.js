@@ -1,12 +1,12 @@
-import {FormInput, FormRow, StepFrame} from './StepComponents';
+import { FormInput, FormRow, StepFrame } from './StepComponents';
 import { useContext } from 'react';
 import { FormContext } from '../../FormContext';
 
- export default function CreditCard() {
+export default function CreditCard() {
 
-  const {formState, updateField} = useContext(FormContext);
-  function handleChange(e){
-    const {name, value} = e.target;
+  const { formState, updateField } = useContext(FormContext);
+  function handleChange(e) {
+    const { name, value } = e.target;
     updateField(name, value);
   }
   return (
@@ -61,5 +61,5 @@ import { FormContext } from '../../FormContext';
         />
       </FormRow>
     </StepFrame>
-    )
- }
+  )
+}

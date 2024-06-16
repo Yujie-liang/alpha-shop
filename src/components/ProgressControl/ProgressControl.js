@@ -1,5 +1,5 @@
 import styles from './ProgressControl.module.scss';
-import{ useContext } from 'react';
+import { useContext } from 'react';
 import { FormContext } from '../../FormContext';
 import { CartContext } from '../../CartContext';
 function Button({ direction, text, iconUrl, onClick }) {
@@ -22,39 +22,40 @@ function ButtonGroup({ dataPhase, children }) {
 }
 
 
-export default function ProgressControl({step, handleStep}) {
-  const {formState} = useContext(FormContext);
-  const {total} = useContext(CartContext);
-
+export default function ProgressControl({ step, handleStep }) {
+  const { formState } = useContext(FormContext);
+  const { total } = useContext(CartContext);
+  const rightArrow = `${process.env.PUBLIC_URL}/icons/right-arrow.svg`;
+  const leftArrow = `${process.env.PUBLIC_URL}/icons/left-arrow.svg`;
   return (
     <section className={`${styles.progressControlContainer} col col-lg-6 col-sm-12`}>
-      {step === 1 && 
+      {step === 1 &&
         <ButtonGroup
           dataPhase="address"
         >
           <Button
             direction="next"
             text="下一步"
-            iconUrl="/icons/right-arrow.svg"
-            onClick={(e)=>handleStep(e, 'next')}
+            iconUrl={rightArrow}
+            onClick={(e) => handleStep(e, 'next')}
           />
         </ButtonGroup>
       }
-      {step === 2 && 
+      {step === 2 &&
         <ButtonGroup
           dataPhase="shipping"
         >
           <Button
             direction="prev"
             text="上一步"
-            iconUrl="/icons/left-arrow.svg"
-            onClick={(e)=>handleStep(e, 'prev')}
+            iconUrl={leftArrow}
+            onClick={(e) => handleStep(e, 'prev')}
           />
           <Button
             direction="next"
             text="下一步"
-            iconUrl="/icons/right-arrow.svg"
-            onClick={(e)=>handleStep(e, 'next')}
+            iconUrl={rightArrow}
+            onClick={(e) => handleStep(e, 'next')}
           />
         </ButtonGroup>
       }
@@ -65,14 +66,14 @@ export default function ProgressControl({step, handleStep}) {
           <Button
             direction="prev"
             text="上一步"
-            iconUrl="/icons/left-arrow.svg"
-            onClick={(e)=>handleStep(e, 'prev')}
+            iconUrl={leftArrow}
+            onClick={(e) => handleStep(e, 'prev')}
           />
           <Button
             direction="next"
             text="確認下單"
-            iconUrl="/icons/right-arrow.svg"
-            onClick={()=>console.log(`Form State: ${JSON.stringify(formState)} Total: ${total}`)}
+            iconUrl={rightArrow}
+            onClick={() => console.log(`Form State: ${JSON.stringify(formState)} Total: ${total}`)}
           />
         </ButtonGroup>
       }

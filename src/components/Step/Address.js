@@ -1,5 +1,5 @@
 
-import {FormInput, FormRow, FormSelect, StepFrame} from './StepComponents';
+import { FormInput, FormRow, FormSelect, StepFrame } from './StepComponents';
 
 const titleOptions = [
   { value: "mr", text: "先生" },

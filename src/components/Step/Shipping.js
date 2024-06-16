@@ -1,4 +1,4 @@
-import {FormRadio, StepFrame} from './StepComponents';
+import { FormRadio, StepFrame } from './StepComponents';
 
 export default function Shipping() {
     return (
