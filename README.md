@@ -9,6 +9,7 @@
 <p>
 A checkout part of an online shop, designed to provide good user experience of checking out by separate the form into several steps and other interactive details. Developed with `React framework` with `Sass/Scss`. The main focus of the project is in the use of `React` to build reusable components for better maintenance. `useState` was used to build the interactive web.
 </p>
+<p>Check it out: https://yujie-liang.github.io/alpha-shop/</p>
 </div>  
 
 ## :camera:Screenshots
