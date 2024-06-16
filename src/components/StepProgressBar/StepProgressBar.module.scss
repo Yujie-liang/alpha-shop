@@ -1,39 +1,15 @@
-%done-phase {
-    .icon {
-        display: inline-block;
-    }
-
-    .text {
-        display: none;
-    }
-}
-
-%undone-phase {
-    .icon {
-        display: none;
-    }
-
-    .text {
-        display: inline-block;
-    }
-}
-
-%current-text {
-    color: var(--progress-current-color);
-}
-
 .progressContainer {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin: 48px auto 0 auto;
+
     .progressGroup {
         display: block;
 
         // current
         .progressIcon {
             display: inline-block;
-
             background-color: transparent;
             border: 1px solid var(--progress-current-color);
             border-radius: 50%;
@@ -62,9 +38,6 @@
         .progressIconDone {
             display: inline-block;
             background-color: black;
-            display: inline-flex;
-            justify-content: center;
-            align-items: center;
             border: 1px solid var(--progress-done-color);
             border-radius: 50%;
             width: 26px;
@@ -79,11 +52,11 @@
             //check mark
             &::after {
                 content: '\2714';
+                // display: inline-block;
                 color: white;
                 font-size: 12px;
                 line-height: 24px;
                 text-align: center;
-
             }
         }
 
@@ -126,7 +99,8 @@
 
     }
 
-    .progressBar, .progressBarHidden {
+    .progressBar,
+    .progressBarHidden {
         display: flex;
         flex-grow: 1;
         max-width: 60px;
@@ -135,6 +109,7 @@
         border-style: solid;
         color: var(--done-progress-border);
     }
+
     .progressBarHidden {
         visibility: hidden;
     }
