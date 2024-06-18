@@ -14,7 +14,7 @@ function App() {
     if (direction === 'prev' && step > 1){
       setStep(step - 1);
     }
-    if (direction === 'next' && step <3){
+    if (direction === 'next' && step <= 3){
       setStep(step + 1);
     }
   }

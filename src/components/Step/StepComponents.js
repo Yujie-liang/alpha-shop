@@ -23,7 +23,7 @@ export function FormSelect({ lg, sm, label, required, options }) {
       <div className={styles.selectContainer}>
         <select className={`${styles.input} ${styles.select}`} required={required}>
           {options.map((option) => (
-            <option className={styles.option} value={option.value}>{option.text}</option>
+            <option className={styles.option} value={option.value} key={option.value}>{option.text}</option>
           ))}
         </select>
       </div>

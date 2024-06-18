@@ -2,6 +2,7 @@ import styles from './ProgressControl.module.scss';
 import { useContext } from 'react';
 import { FormContext } from '../../FormContext';
 import { CartContext } from '../../CartContext';
+import Swal from 'sweetalert2';
 function Button({ direction, text, iconUrl, onClick }) {
   const btnStyle = direction === "next" ? styles.btnNext : styles.btnPrev;
   return (
@@ -27,6 +28,7 @@ export default function ProgressControl({ step, handleStep }) {
   const { total } = useContext(CartContext);
   const rightArrow = `${process.env.PUBLIC_URL}/icons/right-arrow.svg`;
   const leftArrow = `${process.env.PUBLIC_URL}/icons/left-arrow.svg`;
+
   return (
     <section className={`${styles.progressControlContainer} col col-lg-6 col-sm-12`}>
       {step === 1 &&
@@ -73,7 +75,16 @@ export default function ProgressControl({ step, handleStep }) {
             direction="next"
             text="確認下單"
             iconUrl={rightArrow}
-            onClick={() => console.log(`Form State: ${JSON.stringify(formState)} Total: ${total}`)}
+            onClick={(e) => {
+              handleStep(e, 'next')
+              console.log(`Form State: ${JSON.stringify(formState)} Total: ${total}`)
+              Swal.fire({
+                title: "表單送出成功",
+                icon: "success",
+                timer: 3000,
+                showConfirmButton: false
+              });
+            }}
           />
         </ButtonGroup>
       }
