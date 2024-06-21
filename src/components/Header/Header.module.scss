@@ -1,0 +1,84 @@
+.header {
+    /*size*/
+    height: 80px;
+    width: 100%;
+    padding: 1rem 1.5rem;
+    /*position*/
+    position: fixed;
+    z-index: 999;
+    /*grid*/
+    display: grid;
+    grid-template-columns: auto 1fr auto auto;
+    align-items: center;
+    grid-gap: 2rem;
+    /*color*/
+    background-color: rgba(255, 255, 255, 0.9);
+  }
+  
+  .company {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .companyLogo {
+    height: 60px;
+    padding: 0.5rem;
+  }
+  
+  .companyName {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  
+  nav {
+    display: none;
+  }
+//   ??
+  .fa-solid,
+  .fa-regular {
+    font-size: 1.5rem;
+    color: black;
+  }
+
+  @media screen and (min-width: 960px) {
+    header {
+      grid-template-columns: auto 1fr auto auto auto;
+      grid-template-rows: 48px;
+      grid-gap: 1rem;
+      align-items: center;
+    }
+  
+  
+    nav {
+      display: block;
+    }
+  
+    .navList {
+      display: grid;
+      grid-auto-flow: column;
+      grid-gap: 2rem;
+      justify-content: center;
+      margin: 0;
+      padding: 0;
+    }
+  
+    .navItem {
+      list-style-type: none;
+      /* 拿掉前方圈圈 */
+    }
+  
+    .navLink {
+      font-size: 1rem;
+      color: black;
+      font-weight: 600;
+      text-decoration: none;
+      /* 拿掉底線 */
+    }
+  
+    .search {
+      grid-column: 3/4;
+      grid-row: 1/2;
+      /*只有一行也要強調，避免因html中位置較前而單獨成行*/
+    }
+  }

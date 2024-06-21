@@ -1,4 +1,4 @@
-import {useState} from 'react';
+import { useState } from 'react';
 import styles from './CheckoutPage.module.scss';
 import StepProgress from '../components/StepProgressBar/StepProgressBar';
 import Steps from '../components/Step/Steps';

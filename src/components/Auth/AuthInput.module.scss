@@ -1,0 +1,23 @@
+.inputContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: #f5f8fa;
+    width: 100%;
+    height: 54px;
+    border-bottom: 2px solid black;
+
+    .label {
+        font-size: 14px; // 添加 px 單位
+        color: #696974; // 移除引號
+        text-align: start;
+    }
+    
+    .input {
+        outline: none;
+        border: none;
+        background-color: #f5f8fa;
+        border-radius: 0;
+    }
+  }
+  
