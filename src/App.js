@@ -1,7 +1,7 @@
 import './App.scss';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { ShoppingPage, CheckoutPage, LoginPage, SignUpPage, HomePage } from './pages';
-import { AuthProvider } from 'context/AuthContext';
+import { AuthProvider } from './context/AuthContext';
 const basename = process.env.PUBLIC_URL;
 
 function App() {

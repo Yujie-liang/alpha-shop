@@ -1,7 +1,7 @@
 
 import { useContext } from 'react';
 import styles from './Cart.module.scss';
-import { CartContext } from '../../CartContext';
+import { CartContext } from '../../context/CartContext';
 
 function Items() {
   const { filteredItems, handleQuantities } = useContext(CartContext);

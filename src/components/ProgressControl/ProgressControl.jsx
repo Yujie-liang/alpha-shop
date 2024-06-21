@@ -1,7 +1,7 @@
 import styles from './ProgressControl.module.scss';
 import { useContext } from 'react';
-import { FormContext } from '../../FormContext';
-import { CartContext } from '../../CartContext';
+import { FormContext } from '../../context/FormContext';
+import { CartContext } from '../../context/CartContext';
 import Swal from 'sweetalert2';
 function Button({ direction, text, iconUrl, onClick }) {
   const btnStyle = direction === "next" ? styles.btnNext : styles.btnPrev;

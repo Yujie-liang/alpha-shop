@@ -1,11 +1,11 @@
 import {useState} from 'react';
 import styles from './CheckoutPage.module.scss';
-import StepProgress from './components/StepProgressBar/StepProgressBar.js';
-import Steps from './components/Step/Steps.js';
-import ProgressControl from './components/ProgressControl/ProgressControl.js';
-import Cart from './components/Cart/Cart.js'
-import { CartProvider } from './CartContext.js';
-import { FormProvider } from './FormContext.js'
+import StepProgress from '../components/StepProgressBar/StepProgressBar';
+import Steps from '../components/Step/Steps';
+import ProgressControl from '../components/ProgressControl/ProgressControl';
+import Cart from '../components/Cart/Cart'
+import { CartProvider } from '../context/CartContext';
+import { FormProvider } from '../context/FormContext'
 
 function Checkout() {
   const [step, setStep] = useState(1);

@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import ProductList from './ProductList'
 import styles from './Cart.module.scss'
-import { CartContext } from '../../CartContext';
+import { CartContext } from '../../context/CartContext';
 
 function CartInfo({type, text, price}){
   const priceStyle = type === 'shipping' ? styles.shippingPrice : styles.infoPrice;
