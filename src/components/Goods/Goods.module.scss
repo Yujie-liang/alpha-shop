@@ -1,0 +1,12 @@
+.goods {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-gap: 0.5rem;
+}
+
+@media screen and (min-width: 960px) {
+  .goods {
+    /* 確保螢幕尺寸超過 960 時，依然保持一列 4 個商品 */
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
