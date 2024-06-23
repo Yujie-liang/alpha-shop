@@ -1,4 +1,9 @@
-.goods {
+.note {
+  text-align: center;
+  color: rgb(106, 7, 7);
+}
+
+.products {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   grid-gap: 0.5rem;
@@ -16,9 +21,9 @@ a.tshirt {
 
 .tshirtImg {
   width: 100%;
-  height: 320px;
+  height: 300px;
   display: block;
-  background: url("https://assets-lighthouse.alphacamp.co/uploads/image/file/14362/t-shirt.png");
+  background: url("../../assets/images/hanger.svg");
   background-size: cover;
   background-position: center;
 }
@@ -63,7 +68,7 @@ a.tshirt {
 }
 
 @media screen and (min-width: 960px) {
-  .goods {
+  .products {
     /* 確保螢幕尺寸超過 960 時，依然保持一列 4 個商品 */
     grid-template-columns: repeat(4, 1fr);
   }

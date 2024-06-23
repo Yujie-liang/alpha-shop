@@ -1,5 +1,5 @@
 {
-  "goods": [
+  "products": [
     {
       "id": 1,
       "name": "T-shirt Stockholm",
@@ -13,7 +13,7 @@
         "M",
         "L"
       ],
-      "catagory": "t-shirt",
+      "category": "t-shirt",
       "price": 290,
       "stock": 5,
       "img": "https://assets-lighthouse.alphacamp.co/uploads/image/file/14372/bastian-ignacio-vega-cani-9UAfLTqMoS0-unsplash__2_.png"
@@ -32,7 +32,7 @@
         "S",
         "M"
       ],
-      "catagory": "t-shirt",
+      "category": "dress",
       "price": 290,
       "stock": 0,
       "img": "https://assets-lighthouse.alphacamp.co/uploads/image/file/14365/anomaly-WWesmHEgXDs-unsplash.jpg"
@@ -50,7 +50,7 @@
         "S",
         "L"
       ],
-      "catagory": "t-shirt",
+      "category": "hat",
       "price": 290,
       "stock": 10,
       "img": "https://assets-lighthouse.alphacamp.co/uploads/image/file/14374/faith-yarn-hgtWvsq5e2c-unsplash.png"
@@ -69,7 +69,7 @@
         "M",
         "L"
       ],
-      "catagory": "t-shirt",
+      "category": "t-shirt",
       "price": 290,
       "stock": 8,
       "img": "https://assets-lighthouse.alphacamp.co/uploads/image/file/14373/christian-bolt-VW5VjskNXZ8-unsplash.png"
@@ -89,7 +89,7 @@
         "M",
         "L"
       ],
-      "catagory": "t-shirt",
+      "category": "dress",
       "price": 290,
       "stock": 3,
       "img": "https://assets-lighthouse.alphacamp.co/uploads/image/file/14372/bastian-ignacio-vega-cani-9UAfLTqMoS0-unsplash__2_.png"
@@ -107,7 +107,7 @@
         "S",
         "M"
       ],
-      "catagory": "t-shirt",
+      "category": "t-shirt",
       "price": 290,
       "stock": 7,
       "img": "https://assets-lighthouse.alphacamp.co/uploads/image/file/14365/anomaly-WWesmHEgXDs-unsplash.jpg"
@@ -125,7 +125,7 @@
         "M",
         "L"
       ],
-      "catagory": "t-shirt",
+      "category": "t-shirt",
       "price": 290,
       "stock": 5,
       "img": "https://assets-lighthouse.alphacamp.co/uploads/image/file/14374/faith-yarn-hgtWvsq5e2c-unsplash.png"
@@ -144,7 +144,7 @@
         "S",
         "M"
       ],
-      "catagory": "t-shirt",
+      "category": "dress",
       "price": 290,
       "stock": 2,
       "img": "https://assets-lighthouse.alphacamp.co/uploads/image/file/14373/christian-bolt-VW5VjskNXZ8-unsplash.png"
@@ -163,7 +163,7 @@
         "S",
         "L"
       ],
-      "catagory": "t-shirt",
+      "category": "skirt",
       "price": 290,
       "stock": 20,
       "img": "https://assets-lighthouse.alphacamp.co/uploads/image/file/14372/bastian-ignacio-vega-cani-9UAfLTqMoS0-unsplash__2_.png"
@@ -182,7 +182,7 @@
         "S",
         "L"
       ],
-      "catagory": "t-shirt",
+      "category": "dress",
       "price": 290,
       "stock": 6,
       "img": "https://assets-lighthouse.alphacamp.co/uploads/image/file/14365/anomaly-WWesmHEgXDs-unsplash.jpg"
@@ -202,7 +202,7 @@
         "M",
         "L"
       ],
-      "catagory": "t-shirt",
+      "category": "skirt",
       "price": 290,
       "stock": 15,
       "img": "https://assets-lighthouse.alphacamp.co/uploads/image/file/14374/faith-yarn-hgtWvsq5e2c-unsplash.png"
@@ -222,7 +222,7 @@
         "M",
         "L"
       ],
-      "catagory": "t-shirt",
+      "category": "skirt",
       "price": 290,
       "stock": 10,
       "img": "https://assets-lighthouse.alphacamp.co/uploads/image/file/14373/christian-bolt-VW5VjskNXZ8-unsplash.png"

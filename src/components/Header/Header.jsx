@@ -3,24 +3,27 @@ import { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { LogoIcon } from '../../assets/images';
 import { useAuth } from '../../context/AuthContext';
+import { useProducts } from '../../context/ProductsContext';
+
 export default function Header() {
     const [showInput, setShowInput] = useState(false);
     const [isMenuVisible, setIsMenuVisible] = useState(false);
-
+    // click to show search input
     const toggleInput = () => {
         setShowInput(!showInput);
     };
-
+    // click to show user operational options
     const toggleMenu = () => {
         setIsMenuVisible(!isMenuVisible);
     };
-
-    const { logout, login } = useAuth();
+    // user logout
+    const { logout } = useAuth();
     const handleLogout = () => {
         logout();
     };
     const navigate = useNavigate();
     const { isAuthenticated, currentMember } = useAuth();
+    // check if it's authenticated
     const handlePermissionCheck = () => {
         navigate('/login');
     }
@@ -30,11 +33,19 @@ export default function Header() {
         }
     }, [navigate, isAuthenticated]);
 
+    // useProducts to filter products by search
+    const { setFilters } = useProducts();
+    const handleChange = (event) => {
+        setFilters(prevFilters => ({
+            ...prevFilters,
+            "search": event.target.value
+        }));
+    };
     return (
         <header className={styles.header}>
             <button href="#" className={`${styles.icon} ${styles.search}`}>
                 <i className={`fa-solid fa-magnifying-glass ${styles.faIcon}`} onClick={toggleInput}></i>
-                <input type="text" placeholder='search' className={`${styles.searchInput} ${showInput ? styles.showInput : ''}`}></input>
+                <input type="text" placeholder='search' className={`${styles.searchInput} ${showInput ? styles.showInput : ''}`} onChange={handleChange}></input>
             </button>
             <Link to="/shop" className={styles.company}>
                 <LogoIcon />
