@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import styles from './CheckoutPage.module.scss';
 import StepProgress from '../components/StepProgressBar/StepProgressBar';
 import Steps from '../components/Step/Steps';
@@ -6,7 +7,8 @@ import ProgressControl from '../components/ProgressControl/ProgressControl';
 import Cart from '../components/Cart/Cart';
 import Header from '../components/Header/Header'
 import { CartProvider } from '../context/CartContext';
-import { FormProvider } from '../context/FormContext'
+import { FormProvider } from '../context/FormContext';
+import { useAuth } from '../context/AuthContext';
 
 function Checkout() {
   const [step, setStep] = useState(1);
@@ -18,6 +20,14 @@ function Checkout() {
       setStep(step + 1);
     }
   }
+  const navigate = useNavigate();
+  const { isAuthenticated } = useAuth();
+
+  useEffect(() => {
+    if (!isAuthenticated) {
+      navigate('/login');
+    }
+  }, [navigate, isAuthenticated]);
 
   return (
     <div className="checkout">

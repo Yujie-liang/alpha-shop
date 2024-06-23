@@ -8,15 +8,14 @@ import Footer from '../components/Footer/Footer';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 
-function ShoppingPage() {
+function FavoritePage() {
 
   return (
     <div className="shop">
       <Header />
       <div className={`container ${styles.title}`}>
-        <h1 className={styles.titleText}>Basic Clothes</h1>
+        <h1 className={styles.titleText}>Your Favorite Clothes</h1>
       </div>
-      <Filter />
       <Goods />
       <div className={`container ${styles.pagination}`}>
         <p className={styles.page}>14/14</p>
@@ -27,4 +26,4 @@ function ShoppingPage() {
   );
 }
 
-export default ShoppingPage;
+export default FavoritePage;
