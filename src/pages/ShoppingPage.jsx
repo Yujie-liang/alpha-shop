@@ -15,7 +15,7 @@ function Checkout() {
     <div className="shop">
       <Header />
       <div className={`container ${styles.title}`}>
-        <h1 className={styles.titleText}>Basic T-shirts</h1>
+        <h1 className={styles.titleText}>Basic Clothes</h1>
       </div>
       <Filter />
       <Goods />
