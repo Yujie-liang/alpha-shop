@@ -1,5 +1,6 @@
 import styles from './Header.module.scss';
 import { useState } from 'react';
+import { LogoIcon } from '../../assets/images';
 export default function Header() {
     const [showInput, setShowInput] = useState(false);
 
@@ -14,9 +15,8 @@ export default function Header() {
                 <input type="text" placeholder='search' className={`${styles.searchInput} ${showInput ? styles.showInput : ''}`}></input>
             </div>
             <div className={styles.company}>
-                <img src="https://assets-lighthouse.alphacamp.co/uploads/image/file/14985/logo-2021.png" alt=""
-                    className={styles.companyLogo}></img>
-                <h1 className={styles.companyName}>TSHIRT STORE&reg;</h1>
+                <LogoIcon />
+                <h1 className={styles.companyName}>ALPHA SHOP&reg;</h1>
             </div>
             <nav>
                 <ul className={styles.navList}>

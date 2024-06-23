@@ -1,3 +1,3 @@
-import { ReactComponent as ACLogoIcon } from './ac-logo.svg';
+import { ReactComponent as LogoIcon } from './t-shirt.svg';
 
-export { ACLogoIcon };
+export { LogoIcon };

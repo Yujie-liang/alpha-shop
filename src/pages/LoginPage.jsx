@@ -1,4 +1,4 @@
-import { ACLogoIcon } from '../assets/images';
+import { LogoIcon } from '../assets/images';
 import AuthInput from '../components/Auth/AuthInput';
 import { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
@@ -47,9 +47,9 @@ const LoginPage = () => {
   return (
     <div className={styles.authContainer}>
       <div>
-        <ACLogoIcon />
+        <LogoIcon />
       </div>
-      <h1>Alpha Shop登入</h1>
+      <h1 className={styles.loginTitle}>Alpha Shop登入</h1>
 
       <div className={styles.authInputContainer}>
         <AuthInput
