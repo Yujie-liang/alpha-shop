@@ -4,6 +4,64 @@
   grid-gap: 0.5rem;
 }
 
+.card {
+  border: none;
+  position: relative;
+}
+
+a.tshirt {
+  text-decoration: none;
+  position: relative;
+}
+
+.tshirtImg {
+  width: 100%;
+  height: 320px;
+  display: block;
+  background: url("https://assets-lighthouse.alphacamp.co/uploads/image/file/14362/t-shirt.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.tshirtText {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.tshirtName,
+.tshirtPrice {
+  font-size: 1rem;
+  padding: 0;
+  margin: 0;
+  color: black;
+}
+
+.tshirtPrice {
+  font-weight: 700;
+}
+
+.addToFavorite {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 2rem;
+  height: 2rem;
+  background-color: white;
+  border-radius: 1rem;
+}
+
+.tshirtIcon {
+  font-size: 1rem;
+  margin: 9px 7.5px;
+}
+
+.soldOut {
+  font-weight: 400;
+}
+
 @media screen and (min-width: 960px) {
   .goods {
     /* 確保螢幕尺寸超過 960 時，依然保持一列 4 個商品 */
