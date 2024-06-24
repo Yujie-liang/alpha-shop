@@ -61,6 +61,7 @@ a.tshirt {
 .tshirtIcon {
   font-size: 1rem;
   margin: 9px 7.5px;
+  color: var(--pink);
 }
 
 .soldOut {
@@ -71,5 +72,7 @@ a.tshirt {
   .products {
     /* 確保螢幕尺寸超過 960 時，依然保持一列 4 個商品 */
     grid-template-columns: repeat(4, 1fr);
+    max-width: 1440px;
+    margin: 0 auto;
   }
 }
