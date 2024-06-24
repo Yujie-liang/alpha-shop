@@ -4,14 +4,10 @@
       "id": "acbc",
       "username": "sylvia",
       "favorites": [
-        3,
-        2
+        1,
+        2,
+        7
       ]
-    },
-    {
-      "id": "ccc6",
-      "username": "sylvia",
-      "favorites": []
     }
   ],
   "products": [

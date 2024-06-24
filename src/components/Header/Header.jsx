@@ -27,11 +27,12 @@ export default function Header() {
     const handlePermissionCheck = () => {
         navigate('/login');
     }
-    useEffect(() => {
-        if (!isAuthenticated) {
-            navigate('/login');
-        }
-    }, [navigate, isAuthenticated]);
+    // 不用登入也能瀏覽
+    // useEffect(() => {
+    //     if (!isAuthenticated) {
+    //         navigate('/login');
+    //     }
+    // }, [navigate, isAuthenticated]);
 
     // useProducts to filter products by search
     const { setFilters } = useProducts();

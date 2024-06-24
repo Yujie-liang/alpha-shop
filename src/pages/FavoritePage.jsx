@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import styles from './ShoppingPage.module.scss';
 import Header from '../components/Header/Header';
 import Favorites from '../components/Products/Favorites';

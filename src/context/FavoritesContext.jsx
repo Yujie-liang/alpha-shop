@@ -1,4 +1,4 @@
-import { createContext, useState, useEffect, useContext } from 'react';
+import { createContext, useState, useEffect } from 'react';
 
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from './AuthContext';
@@ -16,9 +16,11 @@ const FavoritesProvider = ({ children }) => {
 
   useEffect(() =>{
     const fetchData = async () => {
-    await fetchFavorites(currentMember, setFavorites, setFavoritesProducts);
+      if (currentMember) {
+        await fetchFavorites(currentMember, setFavorites, setFavoritesProducts);
+      }
     };
-    if (currentMember) fetchData();
+    fetchData();
   }, [currentMember]);
 
   const toggleFavorite = async (itemId) => {

@@ -1,20 +1,15 @@
 import { useContext } from 'react';
-import { useNavigate } from 'react-router-dom';
 import styles from './Products.module.scss';
-import { useAuth } from '../../context/AuthContext';
-import { useProducts } from '../../context/ProductsContext';
 import { FavoritesContext } from '../../context/FavoritesContext';
 const Favorites = () => {
-  const navigate = useNavigate();
-  const { filteredProducts } = useProducts();
-  const { favorites, favoritesProducts, toggleFavorite } = useContext(FavoritesContext);
+  const { favoritesProducts, toggleFavorite } = useContext(FavoritesContext);
 
   return (
     <div className={`container ${styles.products}`}>
       {favoritesProducts.length > 0 ? (
         favoritesProducts.map(product => (
           <div key={product.id} className={`${styles.card} ${styles[`card${product.id}`]}`}>
-            <a href="#" className={styles.tshirt}>
+            <div className={styles.tshirt}>
               <div
                 className={`${styles.tshirtImg} ${styles.img1}`}
                 onMouseEnter={e => {
@@ -31,7 +26,7 @@ const Favorites = () => {
                 <p className={styles.tshirtName}>{product.name}</p>
                 <p className={styles.tshirtPrice}>NT$ {product.price}</p>
               </div>
-            </a>
+            </div>
           </div>
         ))
       ) : (

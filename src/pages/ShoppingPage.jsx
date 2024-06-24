@@ -1,12 +1,9 @@
-import { useEffect } from 'react';
 import styles from './ShoppingPage.module.scss';
 import Header from '../components/Header/Header';
 import Filter from '../components/Filter/Filter';
 import Products from '../components/Products/Products';
 import Banner from '../components/Banner/Banner';
 import Footer from '../components/Footer/Footer';
-import { useNavigate } from 'react-router-dom';
-import { useAuth } from '../context/AuthContext';
 
 function ShoppingPage() {
 
