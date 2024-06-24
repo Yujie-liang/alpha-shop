@@ -1,5 +1,6 @@
 import axios from 'axios';
 const authUrl = ' https://todo-list.alphacamp.io/api/auth';
+const baseUrl = 'http://localhost:3004';
 
 export const login = async ({ username, password }) => {
   try {
@@ -47,3 +48,23 @@ export const checkPermission = async (authToken) => {
     console.error('Check permission failed:', error);
   }
 };
+
+export const saveUser = async (username) =>{
+  try {
+    // 檢查用戶是否已存在
+    const userResponse = await axios.get(`${baseUrl}/users/?username=${username}`);
+    if (userResponse.data.length > 0) { // 用戶已存在
+      return;
+    } else {
+      // 用戶不存在，創建新的用戶信息
+      await axios.post(`${baseUrl}/users`, { username, favorites: [] });
+    }
+  } catch (error) {
+    if (error.response && error.response.status === 404) {
+      // 用戶不存在，創建新的用戶信息
+      await axios.post(`${baseUrl}/users`, { username, favorites: [] });
+    } else {
+      console.error("There was an error updating or creating the user data!", error);
+    }
+  }
+}

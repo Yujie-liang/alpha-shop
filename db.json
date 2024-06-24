@@ -1,4 +1,19 @@
 {
+  "users": [
+    {
+      "id": "acbc",
+      "username": "sylvia",
+      "favorites": [
+        3,
+        2
+      ]
+    },
+    {
+      "id": "ccc6",
+      "username": "sylvia",
+      "favorites": []
+    }
+  ],
   "products": [
     {
       "id": 1,

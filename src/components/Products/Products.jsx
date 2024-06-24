@@ -1,12 +1,11 @@
 import styles from './Products.module.scss';
-import { useState, useEffect } from 'react';
+import { useContext } from 'react';
 import { useProducts } from '../../context/ProductsContext';
-import useFavoriteItems from '../../context/FavoriteContext';
-import { useAuth } from '../../context/AuthContext';
-export default function Products({ name, price, imgUrl }) {
+import { FavoritesContext } from '../../context/FavoritesContext';
+
+export default function Products() {
   const { filteredProducts } = useProducts();
-  const { currentMember } = useAuth();
-  const [favorites, toggleFavorite] = useFavoriteItems(currentMember);
+  const { favorites, toggleFavorite } = useContext(FavoritesContext);
 
   if (filteredProducts.length === 0) return (<h2 className={styles.note}>沒有符合條件的商品!</h2>)
   return (

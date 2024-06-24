@@ -1,5 +1,5 @@
 import axios from 'axios';
-const baseUrl = ' http://localhost:3004';
+const baseUrl = 'http://localhost:3004';
 
 export const getProducts = async () => {
   try {

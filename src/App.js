@@ -1,9 +1,11 @@
 import './App.scss';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import { ShoppingPage, CheckoutPage, LoginPage, SignUpPage, HomePage } from './pages';
+import { ShoppingPage, CheckoutPage, LoginPage, SignUpPage, HomePage, FavoritePage } from './pages';
 import { AuthProvider } from './context/AuthContext';
 import { ProductsProvider } from './context/ProductsContext';
-import FavoritePage from './pages/FavoritePage';
+import { FavoritesProvider } from './context/FavoritesContext';
+
+
 const basename = process.env.PUBLIC_URL;
 
 function App() {
@@ -12,6 +14,7 @@ function App() {
       <BrowserRouter basename={basename}>
         <AuthProvider>
           <ProductsProvider>
+            <FavoritesProvider>
             <Routes>
               <Route path="login" element={<LoginPage />} />
               <Route path="signup" element={<SignUpPage />} />
@@ -20,6 +23,7 @@ function App() {
               <Route path="checkout" element={<CheckoutPage />} />
               <Route path="*" element={<HomePage />} />
             </Routes>
+            </FavoritesProvider>
           </ProductsProvider>
         </AuthProvider>
       </BrowserRouter>

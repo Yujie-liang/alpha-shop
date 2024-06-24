@@ -1,5 +1,5 @@
 import { createContext, useContext, useState, useEffect } from 'react';
-import { register, login, checkPermission } from '../api/auth';
+import { register, login, checkPermission, saveUser } from '../api/auth';
 import * as jwt from 'jsonwebtoken';
 import { useLocation } from 'react-router-dom';
 // 每個頁面都讀取得到
@@ -58,6 +58,8 @@ export const AuthProvider = ({ children }) => {
             setPayload(tempPayload);
             setIsAuthenticated(true);
             localStorage.setItem('authToken', authToken);
+            // save user
+            await saveUser(tempPayload.name);
           } else {
             setPayload(null);
             setIsAuthenticated(false);
@@ -75,6 +77,8 @@ export const AuthProvider = ({ children }) => {
             setPayload(tempPayload);
             setIsAuthenticated(true);
             localStorage.setItem('authToken', authToken);
+            // save user，待解析
+            await saveUser(tempPayload.name);
           } else {
             setPayload(null);
             setIsAuthenticated(false);
