@@ -1,0 +1,30 @@
+.modalOverlay {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 400px;
+    height: 480px;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal {
+    background: #f0f0f0;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+  }
+  
+  .modal img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .modal button {
+    margin: 10px;
+  }
+  

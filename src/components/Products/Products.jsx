@@ -1,18 +1,27 @@
 import styles from './Products.module.scss';
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import { useProducts } from '../../context/ProductsContext';
 import { FavoritesContext } from '../../context/FavoritesContext';
+import Modal from './Modal';
 
 export default function Products() {
   const { filteredProducts } = useProducts();
   const { favorites, toggleFavorite } = useContext(FavoritesContext);
+  const [selectedProduct, setSelectedProduct] = useState(null);
+  const handleProductClick = (product) => {
+    setSelectedProduct(product);
+  };
+  const handleCloseModal = () => {
+    setSelectedProduct(null);
+  };
 
   if (filteredProducts.length === 0) return (<h2 className={styles.note}>沒有符合條件的商品!</h2>)
   return (
+    <>
     <div className={`container ${styles.products}`}>
       {filteredProducts.map(product => (
         <div key={product.id} className={`${styles.card}  ${styles[`card${product.id}`]}`}>
-          <div className={styles.tshirt}>
+          <div className={styles.tshirt} onClick={()=>handleProductClick(product)}>
             <div className={`${styles.tshirtImg} ${styles.img1}`} onMouseEnter={e => {
               e.currentTarget.style.backgroundImage = `url(${product.img})`;
             }}
@@ -29,6 +38,11 @@ export default function Products() {
           </div>
         </div>
       ))}
+      {selectedProduct && (
+      <Modal product={selectedProduct} onClose={handleCloseModal} />
+    )}
     </div>
+    
+    </>
   )
 }

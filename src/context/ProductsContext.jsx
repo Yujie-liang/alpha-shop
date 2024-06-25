@@ -46,7 +46,10 @@ export function ProductsProvider({ children }) {
     setFilteredProducts(filteredProducts);
   }, [filters, products]);
 
+  
+
   const value = {
+    products,
     filteredProducts,
     setFilters,
   };

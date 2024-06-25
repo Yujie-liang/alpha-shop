@@ -15,7 +15,7 @@ function CartInfo({type, text, price}){
 
 
 export default function Cart(){
-  const {total} = useContext(CartContext)
+  const { total } = useContext(CartContext);
 
   return(
     <section className={`${styles.cartContainer} col col-lg-5 col-sm-12`}>

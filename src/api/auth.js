@@ -57,12 +57,12 @@ export const saveUser = async (username) =>{
       return;
     } else {
       // 用戶不存在，創建新的用戶信息
-      await axios.post(`${baseUrl}/users`, { username, favorites: [] });
+      await axios.post(`${baseUrl}/users`, { username, favorites: [], cart:[] });
     }
   } catch (error) {
     if (error.response && error.response.status === 404) {
       // 用戶不存在，創建新的用戶信息
-      await axios.post(`${baseUrl}/users`, { username, favorites: [] });
+      await axios.post(`${baseUrl}/users`, { username, favorites: [], cart:[] });
     } else {
       console.error("There was an error updating or creating the user data!", error);
     }

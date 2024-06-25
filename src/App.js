@@ -4,6 +4,7 @@ import { ShoppingPage, CheckoutPage, LoginPage, SignUpPage, HomePage, FavoritePa
 import { AuthProvider } from './context/AuthContext';
 import { ProductsProvider } from './context/ProductsContext';
 import { FavoritesProvider } from './context/FavoritesContext';
+import { CartProvider } from './context/CartContext';
 
 
 const basename = process.env.PUBLIC_URL;
@@ -15,14 +16,16 @@ function App() {
         <AuthProvider>
           <ProductsProvider>
             <FavoritesProvider>
-            <Routes>
-              <Route path="login" element={<LoginPage />} />
-              <Route path="signup" element={<SignUpPage />} />
-              <Route path="shop" element={<ShoppingPage />} />
-              <Route path="favorite" element={<FavoritePage />} />
-              <Route path="checkout" element={<CheckoutPage />} />
-              <Route path="*" element={<HomePage />} />
-            </Routes>
+              <CartProvider>
+                <Routes>
+                  <Route path="login" element={<LoginPage />} />
+                  <Route path="signup" element={<SignUpPage />} />
+                  <Route path="shop" element={<ShoppingPage />} />
+                  <Route path="favorite" element={<FavoritePage />} />
+                  <Route path="checkout" element={<CheckoutPage />} />
+                  <Route path="*" element={<HomePage />} />
+                </Routes>
+              </CartProvider>
             </FavoritesProvider>
           </ProductsProvider>
         </AuthProvider>

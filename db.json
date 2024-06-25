@@ -1,18 +1,28 @@
 {
   "users": [
     {
-      "id": "acbc",
+      "id": "05fe",
       "username": "sylvia",
       "favorites": [
-        1,
-        2,
-        7
+        "2",
+        "3",
+        "1"
+      ],
+      "cart": [
+        {
+          "productId": "8",
+          "quantity": 2
+        },
+        {
+          "productId": "2",
+          "quantity": 2
+        }
       ]
     }
   ],
   "products": [
     {
-      "id": 1,
+      "id": "1",
       "name": "T-shirt Stockholm",
       "color": [
         "red",
@@ -30,7 +40,7 @@
       "img": "https://assets-lighthouse.alphacamp.co/uploads/image/file/14372/bastian-ignacio-vega-cani-9UAfLTqMoS0-unsplash__2_.png"
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "T-shirt Denmark",
       "color": [
         "red",
@@ -49,7 +59,7 @@
       "img": "https://assets-lighthouse.alphacamp.co/uploads/image/file/14365/anomaly-WWesmHEgXDs-unsplash.jpg"
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "T-shirt Stockholm",
       "color": [
         "red",
@@ -67,7 +77,7 @@
       "img": "https://assets-lighthouse.alphacamp.co/uploads/image/file/14374/faith-yarn-hgtWvsq5e2c-unsplash.png"
     },
     {
-      "id": 4,
+      "id": "4",
       "name": "T-shirt Stockholm",
       "color": [
         "blue",
@@ -86,7 +96,7 @@
       "img": "https://assets-lighthouse.alphacamp.co/uploads/image/file/14373/christian-bolt-VW5VjskNXZ8-unsplash.png"
     },
     {
-      "id": 5,
+      "id": "5",
       "name": "T-shirt Stockholm",
       "color": [
         "gray",
@@ -106,7 +116,7 @@
       "img": "https://assets-lighthouse.alphacamp.co/uploads/image/file/14372/bastian-ignacio-vega-cani-9UAfLTqMoS0-unsplash__2_.png"
     },
     {
-      "id": 6,
+      "id": "6",
       "name": "T-shirt Stockholm",
       "color": [
         "red",
@@ -124,7 +134,7 @@
       "img": "https://assets-lighthouse.alphacamp.co/uploads/image/file/14365/anomaly-WWesmHEgXDs-unsplash.jpg"
     },
     {
-      "id": 7,
+      "id": "7",
       "name": "T-shirt Stockholm",
       "color": [
         "blue",
@@ -142,7 +152,7 @@
       "img": "https://assets-lighthouse.alphacamp.co/uploads/image/file/14374/faith-yarn-hgtWvsq5e2c-unsplash.png"
     },
     {
-      "id": 8,
+      "id": "8",
       "name": "T-shirt Stockholm",
       "color": [
         "red",
@@ -161,7 +171,7 @@
       "img": "https://assets-lighthouse.alphacamp.co/uploads/image/file/14373/christian-bolt-VW5VjskNXZ8-unsplash.png"
     },
     {
-      "id": 9,
+      "id": "9",
       "name": "T-shirt Stockholm",
       "color": [
         "red",
@@ -180,7 +190,7 @@
       "img": "https://assets-lighthouse.alphacamp.co/uploads/image/file/14372/bastian-ignacio-vega-cani-9UAfLTqMoS0-unsplash__2_.png"
     },
     {
-      "id": 10,
+      "id": "10",
       "name": "T-shirt Stockholm",
       "color": [
         "red",
@@ -199,7 +209,7 @@
       "img": "https://assets-lighthouse.alphacamp.co/uploads/image/file/14365/anomaly-WWesmHEgXDs-unsplash.jpg"
     },
     {
-      "id": 11,
+      "id": "11",
       "name": "T-shirt Stockholm",
       "color": [
         "red",
@@ -219,7 +229,7 @@
       "img": "https://assets-lighthouse.alphacamp.co/uploads/image/file/14374/faith-yarn-hgtWvsq5e2c-unsplash.png"
     },
     {
-      "id": 12,
+      "id": "12",
       "name": "T-shirt Stockholm",
       "color": [
         "red",
