@@ -79,9 +79,9 @@ export default function ProgressControl({ step, handleStep }) {
               handleStep(e, 'next')
               console.log(`Form State: ${JSON.stringify(formState)} Total: ${total}`)
               Swal.fire({
-                title: "表單送出成功",
+                title: "訂單送出成功",
                 icon: "success",
-                timer: 3000,
+                timer: 2000,
                 showConfirmButton: false
               });
             }}
