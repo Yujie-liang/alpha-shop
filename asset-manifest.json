@@ -1,15 +1,17 @@
 {
   "files": {
-    "main.css": "/alpha-shop/static/css/main.f7ed69d8.css",
-    "main.js": "/alpha-shop/static/js/main.10eee2e3.js",
-    "static/js/453.600d0b5a.chunk.js": "/alpha-shop/static/js/453.600d0b5a.chunk.js",
+    "main.css": "/alpha-shop/static/css/main.75955be5.css",
+    "main.js": "/alpha-shop/static/js/main.f8da300a.js",
+    "static/js/453.ea8adee5.chunk.js": "/alpha-shop/static/js/453.ea8adee5.chunk.js",
     "index.html": "/alpha-shop/index.html",
-    "main.f7ed69d8.css.map": "/alpha-shop/static/css/main.f7ed69d8.css.map",
-    "main.10eee2e3.js.map": "/alpha-shop/static/js/main.10eee2e3.js.map",
-    "453.600d0b5a.chunk.js.map": "/alpha-shop/static/js/453.600d0b5a.chunk.js.map"
+    "static/media/t-shirt.svg": "/alpha-shop/static/media/t-shirt.f9ed568fa5d0799944261e8254ac938a.svg",
+    "static/media/hanger.svg": "/alpha-shop/static/media/hanger.c43534b06c215cc55f4a.svg",
+    "main.75955be5.css.map": "/alpha-shop/static/css/main.75955be5.css.map",
+    "main.f8da300a.js.map": "/alpha-shop/static/js/main.f8da300a.js.map",
+    "453.ea8adee5.chunk.js.map": "/alpha-shop/static/js/453.ea8adee5.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f7ed69d8.css",
-    "static/js/main.10eee2e3.js"
+    "static/css/main.75955be5.css",
+    "static/js/main.f8da300a.js"
   ]
 }
