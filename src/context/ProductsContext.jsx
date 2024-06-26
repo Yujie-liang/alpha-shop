@@ -48,14 +48,14 @@ export function ProductsProvider({ children }) {
 
   
 
-  const value = {
-    products,
-    filteredProducts,
-    setFilters,
-  };
 
   return (
-    <ProductsContext.Provider value={value}>
+    <ProductsContext.Provider value={{
+      products,
+      filteredProducts,
+      setFilters,
+      filters
+    }}>
       {children}
     </ProductsContext.Provider>
   );

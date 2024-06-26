@@ -2,6 +2,8 @@ import { createContext, useContext, useState, useEffect } from 'react';
 import { register, login, checkPermission, saveUser } from '../api/auth';
 import * as jwt from 'jsonwebtoken';
 import { useLocation } from 'react-router-dom';
+import { useProducts } from './ProductsContext';
+
 // 每個頁面都讀取得到
 const defaultAuthContext = {
   isAuthenticated: false,
@@ -18,6 +20,7 @@ export const useAuth = () => useContext(AuthContext);
 export const AuthProvider = ({ children }) => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [payload, setPayload] = useState(null);
+  const { setFilters } = useProducts();
   const { pathname } = useLocation();
 
   useEffect(() => {
@@ -87,6 +90,7 @@ export const AuthProvider = ({ children }) => {
           return success;
         },
         logout: async () => {
+          setFilters({ "size": 'Size', "color": 'Color', "category": 'Category', "search": '' });
           setPayload(null);
           setIsAuthenticated(false);
           localStorage.removeItem('authToken');

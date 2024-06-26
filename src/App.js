@@ -13,8 +13,8 @@ function App() {
   return (
     <div className="app">
       <BrowserRouter basename={basename}>
-        <AuthProvider>
-          <ProductsProvider>
+        <ProductsProvider>
+          <AuthProvider>
             <FavoritesProvider>
               <CartProvider>
                 <Routes>
@@ -27,8 +27,8 @@ function App() {
                 </Routes>
               </CartProvider>
             </FavoritesProvider>
-          </ProductsProvider>
-        </AuthProvider>
+          </AuthProvider>
+        </ProductsProvider>
       </BrowserRouter>
     </div>
   );
