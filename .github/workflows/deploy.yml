@@ -10,6 +10,17 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
+    services:
+      json-server:
+        image: clue/json-server
+        ports:
+          - 3004:3000
+        options: >-
+          --health-cmd "curl --fail http://localhost:3004 || exit 1"
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 3
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -21,6 +32,9 @@ jobs:
 
       - name: Install dependencies
         run: npm install
+      
+      - name: Start JSON Server
+        run: npx json-server --watch db.json --port 3004 &
 
       - name: Build project
         run: npm run build
@@ -36,3 +50,22 @@ jobs:
           git config --global user.email "${{ env.user_email }}"
           git remote set-url origin "https://x-access-token:${{ env.GITHUB_TOKEN }}@github.com/${{ env.repository }}"
           npm run deploy
+          
+  rebase-and-push:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Rebase branch
+      run: |
+        git config --global user.name 'github-actions[bot]'
+        git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+        git checkout main
+        git pull origin main
+        git checkout feature-branch
+        git rebase main
+
+    - name: Push changes
+      run: |
+        git push origin feature-branch --force
