@@ -5,32 +5,16 @@ import { useProducts } from './ProductsContext';
 import axios from 'axios';
 
 const baseUrl = 'http://localhost:3004';
-const initialItems = [
-    {
-      id: '1',
-      name: '貓咪罐罐',
-      img: 'https://picsum.photos/300/300?text=1',
-      price: 100,
-      quantity: 2,
-    },
-    {
-      id: '2',
-      name: '貓咪干干',
-      img: 'https://picsum.photos/300/300?text=2',
-      price: 200,
-      quantity: 1,
-    },
-  ];
   
 export const CartContext = createContext();
 export function CartProvider({children}){
-  const { currentMember } = useAuth();
+  const { currentMember, isAuthenticated } = useAuth();
   const { products } = useProducts();
   const [cart, setCart] = useState([]);
 
   useEffect(() => {
     const fetchCart = async () => {
-      if (currentMember){
+      if (isAuthenticated){
         try {
           const response = await axios.get(`${baseUrl}/users?username=${currentMember.name}`);
           setCart(response.data[0].cart);
@@ -41,7 +25,7 @@ export function CartProvider({children}){
     };
 
     fetchCart();
-  }, [currentMember]);
+  }, [isAuthenticated, currentMember]);
 
   async function handleQuantities(e, productId){
       try {
@@ -80,7 +64,7 @@ export function CartProvider({children}){
 
   // 從product list加到購物車
   const addToCart = async (productId, quantity) => {
-    if (currentMember) {
+    if (isAuthenticated) {
       try {
         const userResponse = await axios.get(`${baseUrl}/users?username=${currentMember.name}`);
         const user = userResponse.data[0];
@@ -102,7 +86,7 @@ export function CartProvider({children}){
   };
 
   const removeFromCart = async (productId) => {
-    if (currentMember) {
+    if (isAuthenticated) {
       try {
         const userResponse = await axios.get(`${baseUrl}/users?username=${currentMember.name}`);
         const user = userResponse.data[0];

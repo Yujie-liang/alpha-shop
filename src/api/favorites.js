@@ -31,7 +31,6 @@ export const updateFavorites = async (currentMember, updatedFavorites, setFavori
         if (res.status === 200) {
             const updatedFavoriteProducts = favoriteProducts.filter(product => updatedFavorites.includes(product.id));
             setFavoriteProducts(updatedFavoriteProducts);
-            console.log('connected');
         }
     }
     } catch(error) {

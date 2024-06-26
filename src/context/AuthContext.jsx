@@ -55,16 +55,17 @@ export const AuthProvider = ({ children }) => {
           const tempPayload = jwt.decode(authToken); // token中帶username, email, password資料
           if (tempPayload) {
             // 若解析成功
+            // 先 save user，讓cartContext和favoriteContext取的到東西
+            await saveUser(tempPayload.name);
+            // 再設定currentMember和isAuthenticate，否則先設定但還沒saveUser創建user就會error
             setPayload(tempPayload);
             setIsAuthenticated(true);
             localStorage.setItem('authToken', authToken);
-            // save user
-            await saveUser(tempPayload.name);
+            return success;
           } else {
             setPayload(null);
             setIsAuthenticated(false);
           }
-          return success;
         },
         login: async (data) => {
           const { success, authToken } = await login({

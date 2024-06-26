@@ -12,19 +12,19 @@ const FavoritesProvider = ({ children }) => {
   const [favorites, setFavorites] = useState([]); // id
   const [favoritesProducts, setFavoritesProducts] = useState([]); // product
   const navigate = useNavigate();
-  const { currentMember } = useAuth();
+  const { currentMember, isAuthenticated } = useAuth();
 
   useEffect(() =>{
     const fetchData = async () => {
-      if (currentMember) {
+      if (isAuthenticated) {
         await fetchFavorites(currentMember, setFavorites, setFavoritesProducts);
       }
     };
     fetchData();
-  }, [currentMember]);
+  }, [isAuthenticated, currentMember]);
 
   const toggleFavorite = async (itemId) => {
-    if (!currentMember) {
+    if (!isAuthenticated) {
       navigate('/login');
       return;
     }
