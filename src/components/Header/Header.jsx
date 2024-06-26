@@ -1,5 +1,5 @@
 import styles from './Header.module.scss';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { LogoIcon } from '../../assets/images';
 import { useAuth } from '../../context/AuthContext';
