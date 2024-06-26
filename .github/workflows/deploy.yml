@@ -23,10 +23,10 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v2
 
       - name: Set up Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v2
         with:
           node-version: '14'
 
@@ -35,6 +35,12 @@ jobs:
       
       - name: Start JSON Server
         run: npx json-server --watch db.json --port 3004 &
+      
+      - name: Wait for JSON Server to be ready
+        run: sleep 20 # Wait to ensure the JSON server starts
+
+      - name: Log JSON Server status
+        run: curl -I http://localhost:3004 # Check if JSON server is running
 
       - name: Build project
         run: npm run build
