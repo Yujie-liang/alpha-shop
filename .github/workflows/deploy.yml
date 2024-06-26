@@ -10,17 +10,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-    services:
-      json-server:
-        image: clue/json-server
-        ports:
-          - 3004:3000
-        options: >-
-          --health-cmd "curl --fail http://localhost:3004 || exit 1"
-          --health-interval 10s
-          --health-timeout 5s
-          --health-retries 12
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
@@ -32,15 +21,6 @@ jobs:
 
       - name: Install dependencies
         run: npm install
-      
-      - name: Start JSON Server
-        run: npx json-server --watch db.json --port 3004 &
-      
-      - name: Wait for JSON Server to be ready
-        run: sleep 20 # Wait to ensure the JSON server starts
-
-      - name: Log JSON Server status
-        run: curl -I http://localhost:3004 # Check if JSON server is running
 
       - name: Build project
         run: npm run build
@@ -56,3 +36,21 @@ jobs:
           git config --global user.email "${{ env.user_email }}"
           git remote set-url origin "https://x-access-token:${{ env.GITHUB_TOKEN }}@github.com/${{ env.repository }}"
           npm run deploy
+
+  run-json-server:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '14'
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Start JSON Server
+      run: npm run dev-server
