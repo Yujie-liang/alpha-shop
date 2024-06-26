@@ -12,12 +12,17 @@ const LoginPage = () => {
   const navigate = useNavigate();
   const { login, isAuthenticated } = useAuth(); // 取出需要的狀態與方法
   const handleClick = async () => {
-    if (username.length === 0) {
+    if (username.length === 0 || password.length === 0) {
+      Swal.fire({
+        title: '請輸入帳號密碼',
+        icon: 'error',
+        showConfirmButton: false,
+        timer: 1000,
+        position: 'top',
+      });
       return;
     }
-    if (password.length === 0) {
-      return;
-    }
+    console.log(username, password)
     const success = await login({ username, password }); //login() 變成是 AuthContext 裡的方法，而非直接呼叫api
     if (success) {
       Swal.fire({
@@ -30,7 +35,7 @@ const LoginPage = () => {
       return;
     }
     Swal.fire({
-      title: '登入失敗',
+      title: '登入失敗，帳號或密碼錯誤',
       icon: 'error',
       showConfirmButton: false,
       timer: 1000,
