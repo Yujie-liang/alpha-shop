@@ -19,7 +19,7 @@ jobs:
           --health-cmd "curl --fail http://localhost:3004 || exit 1"
           --health-interval 10s
           --health-timeout 5s
-          --health-retries 3
+          --health-retries 12
 
     steps:
       - name: Checkout repository
