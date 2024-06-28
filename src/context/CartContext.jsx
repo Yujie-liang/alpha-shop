@@ -4,7 +4,8 @@ import { useAuth } from './AuthContext';
 import { useProducts } from './ProductsContext';
 import axios from 'axios';
 
-const baseUrl = 'http://localhost:3004';
+// const baseUrl = 'http://localhost:3004';
+const baseUrl = 'https://us-central1-alpha-shop-api.cloudfunctions.net/api';
   
 export const CartContext = createContext();
 export function CartProvider({children}){

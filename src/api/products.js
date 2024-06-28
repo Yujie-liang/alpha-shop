@@ -1,5 +1,6 @@
 import axios from 'axios';
-const baseUrl = 'http://localhost:3004';
+// const baseUrl = 'http://localhost:3004';
+const baseUrl = 'https://us-central1-alpha-shop-api.cloudfunctions.net/api';
 
 export const getProducts = async () => {
   try {
