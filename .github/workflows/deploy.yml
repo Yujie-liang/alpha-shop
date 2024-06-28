@@ -36,21 +36,3 @@ jobs:
           git config --global user.email "${{ env.user_email }}"
           git remote set-url origin "https://x-access-token:${{ env.GITHUB_TOKEN }}@github.com/${{ env.repository }}"
           npm run deploy
-
-  run-json-server:
-    runs-on: ubuntu-latest
-
-    steps:
-    - name: Checkout repository
-      uses: actions/checkout@v2
-
-    - name: Set up Node.js
-      uses: actions/setup-node@v2
-      with:
-        node-version: '16'
-
-    - name: Install dependencies
-      run: npm install --no-optional
-
-    - name: Start JSON Server
-      run: npm run dev-server

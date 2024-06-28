@@ -21,8 +21,8 @@ export default function Products() {
     <div className={`container ${styles.products}`}>
       {filteredProducts.map(product => (
         <div key={product.id} className={`${styles.card}  ${styles[`card${product.id}`]}`}>
-          <div className={styles.tshirt} onClick={()=>handleProductClick(product)}>
-            <div className={`${styles.tshirtImg} ${styles.img1}`} onMouseEnter={e => {
+          <div className={styles.tshirt}>
+            <div className={`${styles.tshirtImg} ${styles.img1}`} onClick={()=>handleProductClick(product)} onMouseEnter={e => {
               e.currentTarget.style.backgroundImage = `url(${product.img})`;
             }}
               onMouseLeave={e => {
