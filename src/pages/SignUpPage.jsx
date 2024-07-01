@@ -42,7 +42,7 @@ const SignUpPage = () => {
       return;
     }
     Swal.fire({
-      title: '註冊失敗',
+      title: '帳號可能已被註冊，再試一次',
       icon: 'error',
       showConfirmButton: false,
       timer: 1000,

@@ -7,20 +7,26 @@
     <img src="https://img.shields.io/badge/React-18.3.1-blue"/>
 </p>
 <p>
-A checkout part of an online shop, designed to provide good user experience of checking out by separate the form into several steps and other interactive details. Developed with `React framework` with `Sass/Scss`. The main focus of the project is in the use of `React` to build reusable components for better maintenance. `useState` was used to build the interactive web.
+An online shop, developed with `React framework` and `Sass/Scss`. The main focus of the project is in the use of `React` to build reusable components for better maintenance. `useState` was used to build the interactive web. Responsive web design (RWD) was used to better display the website on different screen sizes (focused on desktop and pad in this project) Register, login, and other database operation functions were implemented by api integration.
 </p>
 <p>Check it out: https://yujie-liang.github.io/alpha-shop/</p>
+<p>You can register an account or use the one below:<br>
+account: sylvia, password:123<p>
 </div>  
 
 ## :camera:Screenshots
+![shopPage](https://i.imgur.com/XVJaNWk.png)
 ![checkout](https://i.imgur.com/NneNQyl.png)
 
 ## :star2: Features
 
-- Users can fill information in the forms<br>
-- A step progress to keep track of users' step<br>
-- Buttons to guide users completing the checkout<br>
-- +- buttons in the cart to make users add and reduce item quantities easily<br>
+- Users can sign up with username, email, and password<br>
+- Users can save favorite products and check the cart after login<br>
+- Users can browse the products without login<br>
+- Users can search and filter products to find the desired products<br>
+- Users can add products with quantities to the cart<br>
+- Users can adjust quantities of products in the cart<br>
+
 
 
 ## :diamond_shape_with_a_dot_inside: Installation
@@ -49,11 +55,11 @@ Compiled successfully!
 
 You can now view alpha-shop in the browser.
 
-  Local:            http://localhost:3000
-  On Your Network:  http://192.168.50.172:3000
+  Local:            http://localhost:3000/alpha-shop
+  On Your Network:  http://192.168.xx.xxx:3000/alpha-shop
 
 ```
-Then, you can view alpha-shop with the url: http://localhost:3000
+Then, you can view alpha-shop with the url: http://localhost:3000/alpha-shop
 
 
 
@@ -83,5 +89,5 @@ For the full list, check out /package.json
 /src/components - components that build the app with
 
 ## 💎 Reference
-This project is an assignment in the course:
-Dev C4 Become a Software Engineer - Front-End Specialization by AlphaCamp. The specifications and the wireframe were provided by AlphaCamp. The code was then structured and written by me based on the provided resource from scratch.
+This project was inspired by multiple assignments in the course:
+Dev C4 Become a Software Engineer - Front-End Specialization by AlphaCamp.
