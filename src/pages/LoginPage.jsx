@@ -22,7 +22,7 @@ const LoginPage = () => {
       });
       return;
     }
-    console.log(username, password)
+
     const success = await login({ username, password }); //login() 變成是 AuthContext 裡的方法，而非直接呼叫api
     if (success) {
       Swal.fire({

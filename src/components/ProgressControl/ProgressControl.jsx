@@ -77,6 +77,7 @@ export default function ProgressControl({ step, handleStep }) {
             iconUrl={rightArrow}
             onClick={(e) => {
               handleStep(e, 'next')
+              // dev mode only: console.log to check if data from different components can be got successfully
               console.log(`Form State: ${JSON.stringify(formState)} Total: ${total}`)
               Swal.fire({
                 title: "訂單送出成功",
