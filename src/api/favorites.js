@@ -1,6 +1,6 @@
 import axios from 'axios';
-const baseUrl = 'http://localhost:3004';
-// const baseUrl = 'https://us-central1-alpha-shop-api.cloudfunctions.net/api';
+// const baseUrl = 'http://localhost:3004';
+const baseUrl = 'https://us-central1-alpha-shop-api.cloudfunctions.net/api';
 export const fetchFavorites = async (currentMember, setFavorites, setFavoriteProducts) => {
     try {
         // 獲取用戶的 favorites

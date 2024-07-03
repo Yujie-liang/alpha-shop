@@ -1,7 +1,7 @@
 import axios from 'axios';
 const authUrl = ' https://todo-list.alphacamp.io/api/auth';
-const baseUrl = 'http://localhost:3004';
-// const baseUrl = 'https://us-central1-alpha-shop-api.cloudfunctions.net/api';
+// const baseUrl = 'http://localhost:3004';
+const baseUrl = 'https://us-central1-alpha-shop-api.cloudfunctions.net/api';
 
 export const login = async ({ username, password }) => {
   try {
